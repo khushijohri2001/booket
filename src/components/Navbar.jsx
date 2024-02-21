@@ -4,21 +4,20 @@ import { Link, NavLink } from "react-router-dom";
 import Badge from "./Badge";
 import { navButtonData } from "../utils/nav-button-data";
 import { NavlinkButton } from "./Buttons";
+import { useCart } from "../context/cart-context";
 
 const Navbar = () => {
-  // const {
-  //     cart,
-  //     wishlistState: { wishlist },
-  //     productDispatch
-  //   } = useCart();
-
-  //   console.log(wishlist.length);
+  const {
+      cart,
+      wishlist,
+      productDispatch
+    } = useCart();
 
 
   return (
     <div className="flex justify-between items-center py-3 gap-2 bg-[#fae9e6] px-12 shadow-md">
       <div>
-        <Link to="/products">
+        <Link to="/">
           <img src={logo} alt="Booklet Logo" className="w-28 hover:scale-105" />
         </Link>
       </div>
@@ -29,12 +28,12 @@ const Navbar = () => {
             type="text"
             placeholder="What are you looking for?"
             className="border-0 flex-grow rounded-l-3xl py-1 px-6 w-[32rem] bg-white focus:outline-0"
-            // onChange={(event) => {
-            //   productDispatch({
-            //     type: "FILTER_BY_SEARCH",
-            //     payload: event.target.value
-            //   });
-            // }}
+            onChange={(event) => {
+              productDispatch({
+                type: "FILTER_BY_SEARCH",
+                payload: event.target.value
+              });
+            }}
           />
           <i className="fa-solid fa-magnifying-glass cursor-pointer border-0 flex-grow rounded-r-3xl py-2 pr-6 bg-white"></i>
         </div>
@@ -42,12 +41,12 @@ const Navbar = () => {
 
       <div className="flex items-center justify-around gap-1">
         {
-          navButtonData.map((btnInfo) => <NavlinkButton btnInfo={btnInfo} /> )
+          navButtonData.map((btnInfo) => <NavlinkButton key={btnInfo.id} btnInfo={btnInfo} /> )
         }
 
         <div className="my-0 mx-2 hover:scale-105">
           <Badge
-          // badgeContent={wishlist.length}
+          badgeContent={wishlist.length}
           >
             <NavLink to="/wishlist">
               <i class="fa-regular fa-heart text-xl "></i>
@@ -58,7 +57,7 @@ const Navbar = () => {
         <div className="my-0 mx-2 hover:scale-105">
           <NavLink to="/cart">
             <Badge
-            //   badgeContent={cart.length}
+              badgeContent={cart.length}
             >
               <i class="fa-solid fa-cart-shopping text-xl"></i>
             </Badge>
@@ -70,3 +69,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
