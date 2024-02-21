@@ -3,6 +3,7 @@ import { Slider } from "../components";
 import NewCollection from "../components/NewCollection";
 import BestSeller from "../components/BestSeller";
 import Welcome from "../components/Welcome";
+import ShopByCategory from "../components/ShopByCategory";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
         <Welcome/>
         <Slider />
         <BestSeller />
-        {/* <ByCategories /> */}
+        <ShopByCategory/>
       </div>
   );
 };

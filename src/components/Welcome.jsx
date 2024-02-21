@@ -1,6 +1,7 @@
 import React from "react";
 import { welcomeBanner } from "../assets";
 import { Link } from "react-router-dom";
+import { PrimaryButton } from "./Buttons";
 
 const Welcome = () => {
   return (
@@ -9,7 +10,7 @@ const Welcome = () => {
         <h1 className=" text-7xl font-greatVibes  mb-8">
           Welcome to Booklet Store
         </h1>
-        <div className=" text-lg font-serif">
+        <div className=" text-lg font-serif mb-8">
           <p className="mb-4">
             Thank You for visitng Booklet, a radiant realm where stationery
             dreams, delightful accessories, and chic lifestyle products come to
@@ -21,11 +22,8 @@ const Welcome = () => {
             functional.
           </p>
         </div>
-        <Link to="about">
-          <button className="flex items-center gap-3 my-8 px-4 py-2 text-lg font-semibold border-2 border-black cursor-pointer bg-transparent hover:bg-white ">
-            Read More <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </Link>
+
+        <PrimaryButton path="about" label="Read More"  />
       </div>
 
       <div>

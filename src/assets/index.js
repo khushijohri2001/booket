@@ -17,12 +17,13 @@ import notebook10 from "./notebook10.jpg"
 import notebook11 from "./notebook11.jpg"
 import notebook12 from "./notebook12.jpg"
 import notebook13 from "./notebook13.jpg"
-import notebook14 from "./notebook14.png"
-import notebook15 from "./notebook15.png"
+import journal1 from "./journal1.png"
+import journal2 from "./journal2.png"
+import journal3 from "./journal3.webp"
 import logo from "./Booklet-logos_transparent.png"
 import newCollectionBanner from "./new-collection-banner.png"
 import savedPriceRibbon from "./save-price-ribbon.png"
 import welcomeBanner from "./welcome-banner.png"
 
 
-export {welcomeBanner, newCollectionBanner, savedPriceRibbon, logo, bookmark1, bookmark2, bookmark3, bookmark4, bookmark5, bookmark6, notebook1, notebook2, notebook3, notebook4, notebook5, notebook6, notebook7, notebook8, notebook9, notebook10, notebook11, notebook12, notebook13, notebook14, notebook15}
+export {welcomeBanner, newCollectionBanner, savedPriceRibbon, logo, bookmark1, bookmark2, bookmark3, bookmark4, bookmark5, bookmark6, notebook1, notebook2, notebook3, notebook4, notebook5, notebook6, notebook7, notebook8, notebook9, notebook10, notebook11, notebook12, notebook13, journal1, journal2, journal3}

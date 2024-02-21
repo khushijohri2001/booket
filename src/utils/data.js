@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { bookmark1, bookmark2, bookmark3, bookmark4, bookmark5, bookmark6, notebook1, notebook10, notebook11, notebook12, notebook13, notebook14, notebook15, notebook2, notebook3, notebook4, notebook5, notebook6, notebook7, notebook8, notebook9 } from "../assets";
+import { bookmark1, bookmark2, bookmark3, bookmark4, bookmark5, bookmark6, journal1, journal2, journal3, notebook1, notebook10, notebook11, notebook12, notebook13, notebook2, notebook3, notebook4, notebook5, notebook6, notebook7, notebook8, notebook9 } from "../assets";
 
 const data = [
   {
@@ -300,11 +300,11 @@ const data = [
   {
     id: uuid(),
     availablity: "In Stock",
-    image: notebook14,
-    name: "Kawai Spiral Notebook",
+    image: journal1,
+    name: "Kawai Spiral Journal",
     price: 279,
     originalPrice: 599,
-    category: "Notebook",
+    category: "Journal",
     type: "Best Seller",
     description: `This cute notebook is the ultimate solution for all your planning needs | Non-rewritable`,
     rating: 4,
@@ -313,14 +313,27 @@ const data = [
   {
     id: uuid(),
     availablity: "In Stock",
-    image: notebook15,
-    name: "Personalised Notebook",
+    image: journal2,
+    name: "Personalised Journal",
     price: 559,
     originalPrice: 899,
-    category: "Notebook",
+    category: "Journal",
     type: "Best Seller",
     description: `Pink Floral notebook is perfect for planning your Days, Weeks and Year | Non-rewritable`,
     rating: 4,
+    qty: 1
+  },
+  {
+    id: uuid(),
+    availablity: "In Stock",
+    image: journal3,
+    name: "Bright & Early Productivity Journal",
+    price: 1099,
+    originalPrice: 1299,
+    category: "Journal",
+    type: "By Categories",
+    description: `Bright & Early Journal will help you focus, prioritize your time, and be more mindful | Non-rewritable`,
+    rating: 5,
     qty: 1
   }
 ];

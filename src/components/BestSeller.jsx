@@ -1,16 +1,16 @@
 import React from "react";
-import ProductCard from "./ProductCard";
+import ProductCard from "./cards/ProductCard";
 import data from "../utils/data";
-import { Link } from "react-router-dom";
+import { PrimaryButton } from "./Buttons";
 
 const BestSeller = () => {
   return (
-    <div className="h-[86vh] py-16 px-28">
-      <h1 className="font-playfairDisplay font-extrabold text-6xl text-center mb-16">
+    <div className="flex flex-col justify-between h-screen py-16 px-28 mb-24">
+      <h1 className="font-playfairDisplay font-extrabold text-6xl text-center">
         Bestsellers
       </h1>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-wrap">
         {data.map(
           (product) =>
             product.type === "Best Seller" && (
@@ -19,11 +19,7 @@ const BestSeller = () => {
         )}
       </div>
 
-      <Link to="products">
-        <button className="flex items-center gap-3 mt-4 mx-auto px-4 py-2 text-lg font-semibold border-2 border-black cursor-pointer hover:bg-white bg-transparent">
-          Shop Now <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </Link>
+      <PrimaryButton path="products" label="Shop Now" center />
     </div>
   );
 };

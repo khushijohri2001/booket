@@ -2,6 +2,8 @@ import React from "react";
 import { logo } from "../assets";
 import { Link, NavLink } from "react-router-dom";
 import Badge from "./Badge";
+import { navButtonData } from "../utils/nav-button-data";
+import { NavlinkButton } from "./Buttons";
 
 const Navbar = () => {
   // const {
@@ -11,6 +13,7 @@ const Navbar = () => {
   //   } = useCart();
 
   //   console.log(wishlist.length);
+
 
   return (
     <div className="flex justify-between items-center py-3 gap-2 bg-[#fae9e6] px-12 shadow-md">
@@ -38,29 +41,9 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center justify-around gap-1">
-        <Link to="/about">
-        <div className="my-0 mx-2 hover:scale-105">
-          <button className=" font-julius font-extrabold box-border">
-            About
-          </button>
-        </div>
-        </Link>
-
-        <Link to="contact">
-        <div className="my-0 mx-2 hover:scale-105">
-          <button className=" font-julius font-extrabold box-border">
-            Contact
-          </button>
-        </div>
-        </Link>
-
-        <Link to="signin">
-        <div className="my-0 mx-2 hover:scale-105">
-          <button className=" font-julius font-extrabold box-border">
-            Sign In
-          </button>
-        </div>
-        </Link>
+        {
+          navButtonData.map((btnInfo) => <NavlinkButton btnInfo={btnInfo} /> )
+        }
 
         <div className="my-0 mx-2 hover:scale-105">
           <Badge

@@ -1,6 +1,6 @@
 import React from "react";
-import { discountPercent, savedPrice } from "../utils/functions";
-import { savedPriceRibbon } from "../assets";
+import { discountPercent, savedPrice } from "../../utils/functions";
+import { savedPriceRibbon } from "../../assets";
 
 const ProductCard = ({ productInfo }) => {
   const { id, image, name, price, originalPrice } = productInfo;
