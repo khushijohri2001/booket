@@ -17,7 +17,7 @@ const data = [
     18cm Long & 5cm Wide, Fits perfectly in all sizes of books
     Double-sided print, Pack of 2`,
     rating: 3,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -33,7 +33,7 @@ const data = [
     18cm Long & 5cm Wide, Fits perfectly in all sizes of books
     Double-sided print, Pack of 2`,
     rating: 2,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -49,7 +49,7 @@ const data = [
     18cm Long & 5cm Wide, Fits perfectly in all sizes of books
     Double-sided print, Pack of 2`,
     rating: 1,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -65,7 +65,7 @@ const data = [
     18cm Long & 5cm Wide, Fits perfectly in all sizes of books
     Double-sided print, Pack of 2`,
     rating: 5,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -81,7 +81,7 @@ const data = [
     18cm Long & 5cm Wide, Fits perfectly in all sizes of books
     Double-sided print, Pack of 2`,
     rating: 4,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -97,7 +97,7 @@ const data = [
     18cm Long & 5cm Wide, Fits perfectly in all sizes of books
     Double-sided print, Pack of 2`,
     rating: 2,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -113,7 +113,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 5,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -129,7 +129,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 2,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -144,7 +144,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 2,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -160,7 +160,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 3,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -175,7 +175,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 1,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -190,7 +190,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 1,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -205,7 +205,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 5,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -220,7 +220,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 2,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -235,7 +235,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 3,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -250,7 +250,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 1,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -265,7 +265,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 3,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -280,7 +280,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 2,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -295,7 +295,7 @@ const data = [
      A5 size 40 blank sheets |
      Easy to Write, Erase and Rewrite sheets.`,
     rating: 5,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -308,7 +308,7 @@ const data = [
     type: "Best Seller",
     description: `This cute notebook is the ultimate solution for all your planning needs | Non-rewritable`,
     rating: 4,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -321,7 +321,7 @@ const data = [
     type: "Best Seller",
     description: `Pink Floral notebook is perfect for planning your Days, Weeks and Year | Non-rewritable`,
     rating: 4,
-    qty: 1
+    quantity: 1
   },
   {
     id: uuid(),
@@ -334,7 +334,7 @@ const data = [
     type: "By Categories",
     description: `Bright & Early Journal will help you focus, prioritize your time, and be more mindful | Non-rewritable`,
     rating: 5,
-    qty: 1
+    quantity: 1
   }
 ];
 

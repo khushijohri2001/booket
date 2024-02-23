@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import sliderProducts from '../utils/slider-products';
 
-const Slider = () => {
+const Carousal = () => {
     const [sliderProductDetail] = useState(sliderProducts);
     const [index, setIndex] = useState(0);
   
@@ -68,4 +68,4 @@ const Slider = () => {
     );
 }
 
-export default Slider
+export default Carousal;

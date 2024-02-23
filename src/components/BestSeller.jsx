@@ -1,7 +1,7 @@
 import React from "react";
-import ProductCard from "./cards/ProductCard";
 import data from "../utils/data";
 import { PrimaryButton } from "./Buttons";
+import BestSellerCard from "./cards/BestSellerCard";
 
 const BestSeller = () => {
   return (
@@ -14,7 +14,7 @@ const BestSeller = () => {
         {data.map(
           (product) =>
             product.type === "Best Seller" && (
-              <ProductCard productInfo={product} />
+              <BestSellerCard productInfo={product} />
             )
         )}
       </div>

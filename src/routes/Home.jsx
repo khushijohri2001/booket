@@ -1,16 +1,12 @@
 import React from "react";
-import { Slider } from "../components";
-import NewCollection from "../components/NewCollection";
-import BestSeller from "../components/BestSeller";
-import Welcome from "../components/Welcome";
-import ShopByCategory from "../components/ShopByCategory";
+import { BestSeller, Carousal, NewCollection, ShopByCategory, Welcome } from "../components";
 
 const Home = () => {
   return (
     <div className=" bg-[url('./assets/glitter-background.png')] bg-cover bg-fixed">
         <NewCollection />
         <Welcome/>
-        <Slider />
+        <Carousal />
         <BestSeller />
         <ShopByCategory/>
       </div>

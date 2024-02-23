@@ -1,9 +1,15 @@
 import Footer from "./Footer"
 import Header from "./Header"
-import Slider from "./Slider"
+import Carousal from "./Carousal"
 import AnnouncementBar from "./AnnouncementBar"
 import Navbar from "./Navbar"
 import Badge from "./Badge"
 import ProductCard from "./cards/ProductCard"
+import Filter from "./Filter"
+import BestSeller from "./BestSeller"
+import NewCollection from "./NewCollection"
+import RatingSlider from "./RatingSlider"
+import ShopByCategory from "./ShopByCategory"
+import Welcome from "./Welcome"
 
-export {Header, Footer, Slider, AnnouncementBar, Navbar, Badge, ProductCard}
+export {Header, Footer, Carousal, AnnouncementBar, Navbar, Badge, ProductCard, Filter, BestSeller, NewCollection, RatingSlider, ShopByCategory, Welcome}

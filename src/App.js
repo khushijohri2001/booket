@@ -1,7 +1,6 @@
-import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import './App.css';
-import { Footer, Header } from './components';
-import { useState } from 'react';
+import { Footer } from './components';
 import { About, Cart, Home, Layout, Products, Wishlist } from './routes';
 
 

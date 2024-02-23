@@ -4,14 +4,13 @@ import { Link, NavLink } from "react-router-dom";
 import Badge from "./Badge";
 import { navButtonData } from "../utils/nav-button-data";
 import { NavlinkButton } from "./Buttons";
-import { useCart } from "../context/cart-context";
+import { FILTER_BY_SEARCH } from "../redux/filterSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Navbar = () => {
-  const {
-      cart,
-      wishlist,
-      productDispatch
-    } = useCart();
+  const dispatch = useDispatch()
+  const cartList = useSelector(store => store.cart.cartList)
+  const wishList = useSelector(store => store.wishlist.wishList)
 
 
   return (
@@ -28,12 +27,8 @@ const Navbar = () => {
             type="text"
             placeholder="What are you looking for?"
             className="border-0 flex-grow rounded-l-3xl py-1 px-6 w-[32rem] bg-white focus:outline-0"
-            onChange={(event) => {
-              productDispatch({
-                type: "FILTER_BY_SEARCH",
-                payload: event.target.value
-              });
-            }}
+            onChange={(event) => dispatch(FILTER_BY_SEARCH(event.target.value) )
+            }
           />
           <i className="fa-solid fa-magnifying-glass cursor-pointer border-0 flex-grow rounded-r-3xl py-2 pr-6 bg-white"></i>
         </div>
@@ -46,7 +41,7 @@ const Navbar = () => {
 
         <div className="my-0 mx-2 hover:scale-105">
           <Badge
-          badgeContent={wishlist.length}
+          badgeContent={wishList.length}
           >
             <NavLink to="/wishlist">
               <i class="fa-regular fa-heart text-xl "></i>
@@ -57,7 +52,7 @@ const Navbar = () => {
         <div className="my-0 mx-2 hover:scale-105">
           <NavLink to="/cart">
             <Badge
-              badgeContent={cart.length}
+              badgeContent={cartList.length}
             >
               <i class="fa-solid fa-cart-shopping text-xl"></i>
             </Badge>
