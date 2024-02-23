@@ -50,20 +50,21 @@ const ProductCard = ({ productInfo }) => {
           <p className="text-sm">{name}</p>
         </div>
         <div>
-          {/* {wishList.some((wishlistItem) => wishlistItem.id === id) ? (
+          {wishList.some((wishlistItem) => wishlistItem.id === id) ? (
             <RemoveFromWishlistButton
               onClick={() => dispatch(REMOVE_FROM_WISHLIST(productInfo))}
             />
-          ) : ( */}
+          ) : (
             <WishlistButton
               onClick={() => dispatch(ADD_TO_WISHLIST(productInfo))}
             />
-          {/* )} */}
+           )} 
         </div>
       </div>
 
-      <div className="flex items-center justify-start pb-2">
-        {rating} <i class="fa-solid fa-star text-xs"></i>
+      <div className="flex gap-1 items-center justify-start pb-2">
+       {[...Array(rating)].map((star, index) => <i key={index} className="fa-solid fa-star text-xs text-rose-900"></i>)}
+       
       </div>
 
       <div className="flex items-center justify-between">

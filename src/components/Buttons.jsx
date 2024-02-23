@@ -44,7 +44,7 @@ export const AddToCartButton = ({ onClick }) => {
 export const RemoveFromCartButton = ({ onClick }) => {
   return (
     <>
-      <button onClick={onClick} className="remove-from-cart ">
+      <button onClick={onClick} className="border border-rose-900 text-xs px-2 py-1 bg-rose-900 text-rose-50 transition-all delay-150 hover:bg-rose-200 hover:text-rose-900">
         Remove from Cart
       </button>
     </>
@@ -69,14 +69,6 @@ export const RemoveFromWishlistButton = ({ onClick }) => {
       >
         <i class="fa-solid fa-heart text-rose-300"></i>
       </button>
-    </>
-  );
-};
-
-export const OutOfStock = () => {
-  return (
-    <>
-      <p className="out-of-stock">Out of Stock</p>
     </>
   );
 };
