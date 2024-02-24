@@ -47,8 +47,6 @@ const CartCard = ({ cartItem }) => {
           </button>
         </div>
 
-       
-
         <SecondaryButton
           label="Add To Wishlist"
           onClick={() => {
@@ -56,6 +54,12 @@ const CartCard = ({ cartItem }) => {
             dispatch(REMOVE_FROM_CART(cartItem));
           }}
         />
+
+        <div>
+          <button onClick={() => dispatch(REMOVE_FROM_CART(cartItem))}>
+            <i class="fa-solid fa-trash hover:text-red-600"></i>
+          </button>
+        </div>
       </div>
     </div>
   );

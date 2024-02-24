@@ -8,7 +8,7 @@ const cartSlice = createSlice({
     totalItemQuantity: undefined,
     totalOriginalPrice: undefined,
     totalPrice: undefined,
-    totalDiscountPrice: undefined
+    totalDiscountPrice: undefined,
   },
   reducers: {
     ADD_TO_CART: (state, action) => {
@@ -17,9 +17,7 @@ const cartSlice = createSlice({
         (item) => item.id === newItemId
       );
 
-      existingItemId
-        ? existingItemId.quantity++
-        : state.cartList.push(action.payload);
+      !existingItemId && state.cartList.push(action.payload);
     },
     REMOVE_FROM_CART: (state, action) => {
       state.cartList = state.cartList.filter(
@@ -41,21 +39,41 @@ const cartSlice = createSlice({
         .filter((item) => item.quantity !== 0);
     },
     TOTAL_ITEMS_QUANTITY_HANDLER: (state) => {
-        state.totalItemQuantity = state.cartList.reduce((acc, cur) => acc += cur.quantity, 0)
+      state.totalItemQuantity = state.cartList.reduce(
+        (acc, cur) => (acc += cur.quantity),
+        0
+      );
     },
     TOTAL_ORIGINAL_PRICE_HANDLER: (state) => {
-        state.totalOriginalPrice = state.cartList.reduce((acc, cur) => acc + (Number(cur.originalPrice) * cur.quantity), 0)
+      state.totalOriginalPrice = state.cartList.reduce(
+        (acc, cur) => acc + Number(cur.originalPrice) * cur.quantity,
+        0
+      );
     },
     TOTAL_PRICE_HANDLER: (state) => {
-       state.totalPrice = state.cartList.reduce((acc, cur) => acc + (Number(cur.price) * cur.quantity), 0)
+      state.totalPrice = state.cartList.reduce(
+        (acc, cur) => acc + Number(cur.price) * cur.quantity,
+        0
+      );
     },
     TOTAL_DISCOUNT_PRICE_HANDLER: (state) => {
-        state.totalDiscountPrice = state.cartList.reduce((acc, cur) => acc + Number(savedPrice(cur.originalPrice, cur.price)) * cur.quantity, 0)
-    }
+      state.totalDiscountPrice = state.cartList.reduce(
+        (acc, cur) =>
+          acc + Number(savedPrice(cur.originalPrice, cur.price)) * cur.quantity,
+        0
+      );
+    },
   },
 });
 
-export const { ADD_TO_CART, REMOVE_FROM_CART, INCREMENT, DECREMENT, TOTAL_ITEMS_QUANTITY_HANDLER, TOTAL_ORIGINAL_PRICE_HANDLER
-, TOTAL_PRICE_HANDLER, TOTAL_DISCOUNT_PRICE_HANDLER } =
-  cartSlice.actions;
+export const {
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+  INCREMENT,
+  DECREMENT,
+  TOTAL_ITEMS_QUANTITY_HANDLER,
+  TOTAL_ORIGINAL_PRICE_HANDLER,
+  TOTAL_PRICE_HANDLER,
+  TOTAL_DISCOUNT_PRICE_HANDLER,
+} = cartSlice.actions;
 export default cartSlice.reducer;

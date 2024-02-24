@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { CartWithItems, EmptyCart } from "../components";
+import { CartWithItems, EmptyList } from "../components";
 
 const Cart = () => {
   const cartList = useSelector((store) => store.cart.cartList);
@@ -8,7 +8,7 @@ const Cart = () => {
   return (
     <div className="bg-[#eec6c6] py-16 px-8 w-screen ">
       {cartList.length === 0 ? (
-        <EmptyCart/>
+        <EmptyList label="Cart" />
       ) : (
         <CartWithItems />
       )}

@@ -14,10 +14,11 @@ export const PrimaryButton = ({ path, label, center }) => {
   );
 };
 
-export const SecondaryButton = ({ path, label, center }) => {
+export const SecondaryButton = ({ path, label, center, onClick }) => {
   return (
     <Link to={path}>
       <button
+      onClick={onClick}
         className={`${
           center && "mx-auto"
         } flex items-center px-4 py-2 text-lg cursor-pointer bg-rose-100 hover:bg-white bg-transparent`}

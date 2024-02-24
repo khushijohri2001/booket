@@ -1,24 +1,14 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { TOTAL_DISCOUNT_PRICE_HANDLER, TOTAL_ITEMS_QUANTITY_HANDLER, TOTAL_ORIGINAL_PRICE_HANDLER, TOTAL_PRICE_HANDLER } from '../redux/cartSlice';
+import React from 'react'
+import { useSelector } from 'react-redux';
 import { SecondaryButton } from './Buttons';
 
 const CartDetails = () => {
     const {
-        cartList,
         totalItemQuantity,
         totalOriginalPrice,
         totalPrice,
         totalDiscountPrice,
       } = useSelector((store) => store.cart);
-      const dispatch = useDispatch();
-    
-      useEffect(() => {
-        dispatch(TOTAL_ITEMS_QUANTITY_HANDLER());
-        dispatch(TOTAL_ORIGINAL_PRICE_HANDLER());
-        dispatch(TOTAL_PRICE_HANDLER());
-        dispatch(TOTAL_DISCOUNT_PRICE_HANDLER());
-      }, [cartList, dispatch]);
 
   return (
     <div className="flex flex-col gap-4 items-end">

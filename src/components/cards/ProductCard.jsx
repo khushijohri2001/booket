@@ -20,7 +20,6 @@ const ProductCard = ({ productInfo }) => {
   const cartList = useSelector((store) => store.cart.cartList);
   const wishList = useSelector((store) => store.wishlist.wishList);
 
-
   return (
     <div
       className="flex flex-col w-64 h-auto relative font-serif p-4 rounded-sm cursor-pointer hover:bg-[#fef4f2]"
