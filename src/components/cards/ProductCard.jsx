@@ -20,7 +20,6 @@ const ProductCard = ({ productInfo }) => {
   const cartList = useSelector((store) => store.cart.cartList);
   const wishList = useSelector((store) => store.wishlist.wishList);
 
-  console.log(wishList);
 
   return (
     <div

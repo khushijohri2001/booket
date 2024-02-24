@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Navbar = () => {
   const dispatch = useDispatch()
-  const cartList = useSelector(store => store.cart.cartList)
+  const {totalItemQuantity} = useSelector(store => store.cart)
   const wishList = useSelector(store => store.wishlist.wishList)
 
 
@@ -52,7 +52,7 @@ const Navbar = () => {
         <div className="my-0 mx-2 hover:scale-105">
           <NavLink to="/cart">
             <Badge
-              badgeContent={cartList.length}
+              badgeContent={totalItemQuantity}
             >
               <i class="fa-solid fa-cart-shopping text-xl"></i>
             </Badge>

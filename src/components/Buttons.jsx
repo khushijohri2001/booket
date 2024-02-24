@@ -14,6 +14,20 @@ export const PrimaryButton = ({ path, label, center }) => {
   );
 };
 
+export const SecondaryButton = ({ path, label, center }) => {
+  return (
+    <Link to={path}>
+      <button
+        className={`${
+          center && "mx-auto"
+        } flex items-center px-4 py-2 text-lg cursor-pointer bg-rose-100 hover:bg-white bg-transparent`}
+      >
+        {label}
+      </button>
+    </Link>
+  )
+}
+
 export const NavlinkButton = ({ btnInfo }) => {
   const { path, label } = btnInfo;
 
@@ -83,4 +97,6 @@ export const ClearButton = ({onClick}) => {
       </button>
   )
 }
+
+
  

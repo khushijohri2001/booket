@@ -11,5 +11,8 @@ import NewCollection from "./NewCollection"
 import RatingSlider from "./RatingSlider"
 import ShopByCategory from "./ShopByCategory"
 import Welcome from "./Welcome"
+import EmptyCart from "./EmptyCart"
+import CartWithItems from "./CartWithItems"
+import CartDetails from "./CartDetails"
 
-export {Header, Footer, Carousal, AnnouncementBar, Navbar, Badge, ProductCard, Filter, BestSeller, NewCollection, RatingSlider, ShopByCategory, Welcome}
+export {Header, Footer, Carousal, AnnouncementBar, Navbar, Badge, ProductCard, Filter, BestSeller, NewCollection, RatingSlider, ShopByCategory, Welcome, EmptyCart, CartWithItems, CartDetails}
