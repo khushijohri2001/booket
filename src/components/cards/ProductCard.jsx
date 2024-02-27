@@ -81,10 +81,16 @@ const ProductCard = ({ productInfo }) => {
       <div>
         {cartList.some((cartItem) => cartItem.id === id) ? (
           <RemoveFromCartButton
-            onClick={() => dispatch(REMOVE_FROM_CART(productInfo))}
+            onClick={(e) => {
+              e.preventDefault();
+              dispatch(REMOVE_FROM_CART(productInfo))
+            }}
           />
         ) : (
-          <AddToCartButton onClick={() => dispatch(ADD_TO_CART(productInfo))} />
+          <AddToCartButton onClick={(e) => {
+            e.preventDefault();
+            dispatch(ADD_TO_CART(productInfo))
+          }} />
         )}
       </div>
     </div>

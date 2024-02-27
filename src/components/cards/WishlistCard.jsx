@@ -6,6 +6,7 @@ import { REMOVE_FROM_WISHLIST } from '../../redux/wishlistSlice';
 
 const WishlistCard = ({ wishlistItem }) => {
     const {image, name, originalPrice, price } = wishlistItem;
+    
     const dispatch = useDispatch();
     return (
         <div className="flex justify-between w-full h-auto px-2 py-8 gap-2">

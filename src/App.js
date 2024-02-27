@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import { Footer } from './components';
-import { About, Cart, Home, Layout, Products, Wishlist } from './routes';
+import { About, Cart, Contact, Home, Layout, Products, SingleProducts, Wishlist } from './routes';
 import { useEffect } from 'react';
 import { TOTAL_DISCOUNT_PRICE_HANDLER, TOTAL_ITEMS_QUANTITY_HANDLER, TOTAL_ORIGINAL_PRICE_HANDLER, TOTAL_PRICE_HANDLER } from './redux/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,7 +23,7 @@ const App = () => {
   return (
     <>
       <Layout/>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
@@ -43,19 +43,27 @@ export const appRouter = createBrowserRouter(
           element: <Products/>
         },
         {
+          path: "/products/:productId",
+          element: <SingleProducts />,
+        },
+        {
           path: "/wishlist",
           element: <Wishlist />
         },
         {
           path: "/cart",
           element: <Cart />
-        }
+        },
       ]
     },
     {
       path: "/about",
       element: <About />
     },
+    {
+      path: "/contact",
+      element: <Contact />
+    }
     
   ]
 )

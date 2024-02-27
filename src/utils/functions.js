@@ -8,6 +8,8 @@ export const currentYear = () => {
     return year;
 }
 
+export const getProductInfoById = (id, data) => data.filter(product => product.id === id)
+
 export const filterProducts = (data, priceRange, byRating, searchQuery, sort, byStock, byBookmark, byNotebook) => {
     let sortedProducts = data.map((products) => {
       return products;

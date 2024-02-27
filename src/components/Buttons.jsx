@@ -14,14 +14,14 @@ export const PrimaryButton = ({ path, label, center }) => {
   );
 };
 
-export const SecondaryButton = ({ path, label, center, onClick }) => {
+export const SecondaryButton = ({ path, label, center, onClick, large, border }) => {
   return (
     <Link to={path}>
       <button
       onClick={onClick}
         className={`${
           center && "mx-auto"
-        } flex items-center px-4 py-2 text-lg cursor-pointer bg-rose-100 hover:bg-white bg-transparent`}
+        } ${large && "w-full"} ${border && "border border-black"} px-4 py-2 text-lg cursor-pointer bg-rose-100 hover:bg-white bg-transparent`}
       >
         {label}
       </button>
@@ -43,12 +43,12 @@ export const NavlinkButton = ({ btnInfo }) => {
   );
 };
 
-export const AddToCartButton = ({ onClick }) => {
+export const AddToCartButton = ({ onClick, large }) => {
   return (
     <>
       <button
         onClick={onClick}
-        className="border border-rose-200 text-xs px-2 py-1 bg-rose-50 transition-all delay-150 hover:bg-rose-200 hover:text-white"
+        className={` ${large ? 'w-full text-lg py-2' : 'text-xs py-1'} border border-rose-200 px-2  bg-rose-50 transition-all delay-150 hover:bg-rose-200 hover:text-white`}
       >
         Add to cart
       </button>
@@ -56,33 +56,34 @@ export const AddToCartButton = ({ onClick }) => {
   );
 };
 
-export const RemoveFromCartButton = ({ onClick }) => {
+export const RemoveFromCartButton = ({ onClick, large }) => {
   return (
     <>
-      <button onClick={onClick} className="border border-rose-900 text-xs px-2 py-1 bg-rose-900 text-rose-50 transition-all delay-150 hover:bg-rose-200 hover:text-rose-900">
+      <button onClick={onClick} className={` ${large ? 'w-full text-lg py-2' : 'text-xs py-1'} border border-rose-900 px-2 py-1 bg-rose-900 text-rose-50 transition-all delay-150 hover:bg-rose-200 hover:text-rose-900`}>
         Remove from Cart
       </button>
     </>
   );
 };
 
-export const WishlistButton = ({ onClick }) => {
+export const WishlistButton = ({ onClick, dark }) => {
   return (
     <>
-      <button className="text-rose-300 hover:scale-110 transition-all delay-150" onClick={onClick}>
+      <button className={`${dark ? 'text-rose-900' : 'text-rose-300'} hover:scale-110 transition-all delay-150`} onClick={onClick}>
         <i class="fa-regular fa-heart"></i>
       </button>
     </>
   );
 };
-export const RemoveFromWishlistButton = ({ onClick }) => {
+
+export const RemoveFromWishlistButton = ({ onClick, dark }) => {
   return (
     <>
       <button
         className="remove_from_wishlist-btn button-design-circle"
         onClick={onClick}
       >
-        <i class="fa-solid fa-heart text-rose-300"></i>
+        <i class={`fa-solid fa-heart ${dark ? 'text-rose-900' : 'text-rose-300'}`}></i>
       </button>
     </>
   );
