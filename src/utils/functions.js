@@ -64,3 +64,5 @@ export const filterProducts = (data, priceRange, byRating, searchQuery, sort, by
 
     return sortedProducts;
   };
+
+  export const randomNumberGenerator = (first, last) => Number(Math.floor((Math.random() * (last - first)) + first))

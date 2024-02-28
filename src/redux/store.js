@@ -3,12 +3,16 @@ import filterSlice from "./filterSlice";
 import productSlice from "./productSlice";
 import cartSlice from "./cartSlice";
 import wishlistSlice from "./wishlistSlice";
+import menuSlice from "./menuSlice";
+import mediaMatchSlice from "./mediaMatchSlice";
 
 export const store = configureStore({
     reducer: {
         filter: filterSlice,
         product: productSlice,
         cart: cartSlice,
-        wishlist: wishlistSlice
+        wishlist: wishlistSlice,
+        menu: menuSlice,
+        mediaMatch: mediaMatchSlice
     }
 })

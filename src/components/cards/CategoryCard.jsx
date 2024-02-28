@@ -1,24 +1,24 @@
-import React from 'react'
-import { PrimaryButton } from '../Buttons';
+import React from "react";
+import { PrimaryButton } from "../Buttons";
 
-const CategoryCard = ({productInfo}) => {
-    const { id, image, name, category } = productInfo;
+const CategoryCard = ({ productInfo }) => {
+  const { id, image, name, category } = productInfo;
   return (
-    <div className="flex flex-col gap-6 h-auto font-serif p-4 rounded-sm" key={id}>
-    
-    <img
-      src={image}
-      alt={name}
-      className="w-72 h-72 object-cover shadow-sm"
-    />
+    <div
+      className="flex flex-col gap-6 h-auto font-serif p-4 rounded-sm max-sm:gap-3"
+      key={id}
+    >
+      <img
+        src={image}
+        alt={name}
+        className="w-72 h-72 object-cover shadow-sm max-sm:w-64 max-sm:h-64"
+      />
 
-    <h1 className='font-julius text-4xl text-center'>{category}</h1>
+      <h1 className="font-julius text-4xl text-center max-sm:text-2xl">{category}</h1>
 
-    <PrimaryButton center path="products" label="Shop Now" />
+      <PrimaryButton center path="products" label="Shop Now" />
+    </div>
+  );
+};
 
-   
-  </div>
-  )
-}
-
-export default CategoryCard
+export default CategoryCard;

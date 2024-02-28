@@ -5,12 +5,12 @@ import BestSellerCard from "./cards/BestSellerCard";
 
 const BestSeller = () => {
   return (
-    <div className="flex flex-col justify-between h-screen py-16 px-28 mb-24">
+    <div className="flex flex-col justify-between h-screen py-16 px-28 mb-24 max-sm:px-4 max-sm:gap-8 max-sm:h-auto ">
       <h1 className="font-playfairDisplay font-extrabold text-6xl text-center">
         Bestsellers
       </h1>
 
-      <div className="flex justify-between flex-wrap">
+      <div className="flex justify-between flex-wrap max-sm:items-center max-sm:justify-center">
         {data.map(
           (product) =>
             product.type === "Best Seller" && (

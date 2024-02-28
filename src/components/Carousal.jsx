@@ -25,7 +25,7 @@ const Carousal = () => {
     }, [index]);
   
     return (
-      <section className="bg-white py-28 mx-auto z-10">
+      <section className="bg-white py-28 mx-auto z-10 max-sm:py-40">
         <div className=" mt-12 mx-auto mb-0 h-[90vh] max-w-[90vw] text-center relative flex overflow-hidden max-md:h-[450px] max-sm:h-[250px]">
 
           {sliderProductDetail.map((item, indexProduct) => {

@@ -15,5 +15,6 @@ import EmptyList from "./EmptyList"
 import CartWithItems from "./CartWithItems"
 import CartDetails from "./CartDetails"
 import WishlistWithItems from "./WishlistWithItems"
+import HamburgerMenu from "./HamburgerMenu"
 
-export {Header, Footer, Carousal, AnnouncementBar, Navbar, Badge, ProductCard, Filter, BestSeller, NewCollection, RatingSlider, ShopByCategory, Welcome, EmptyList, CartWithItems, CartDetails, WishlistWithItems}
+export {Header, Footer, Carousal, AnnouncementBar, Navbar, Badge, ProductCard, Filter, BestSeller, NewCollection, RatingSlider, ShopByCategory, Welcome, EmptyList, CartWithItems, CartDetails, WishlistWithItems, HamburgerMenu}
