@@ -21,7 +21,7 @@ export const SecondaryButton = ({ path, label, center, onClick, large, border })
       onClick={onClick}
         className={`${
           center && "mx-auto"
-        } ${large && "w-full"} ${border && "border border-black"} px-4 py-2 text-lg cursor-pointer bg-rose-100 hover:bg-white bg-transparent`}
+        } ${large && "w-full"} ${border && "border border-black"} px-4 py-2 text-lg cursor-pointer bg-rose-100 hover:bg-white max-sm:text-base max-sm:py-1 max-sm:px-2`}
       >
         {label}
       </button>

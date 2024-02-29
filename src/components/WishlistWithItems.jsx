@@ -8,8 +8,8 @@ const WishlistWithItems = () => {
 
     return (
       <div className="flex flex-col">
-        <div className="flex justify-between items-center mb-16">
-          <h1 className="font-playfairDisplay font-extrabold text-6xl">
+        <div className="flex justify-between items-center mb-16 max-sm:mb-8">
+          <h1 className="font-playfairDisplay font-extrabold text-6xl max-sm:text-3xl">
             My Wishlist
           </h1>
           <SecondaryButton path="/products" label="Continue Shopping" center />

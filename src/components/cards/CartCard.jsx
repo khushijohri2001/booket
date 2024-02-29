@@ -9,8 +9,8 @@ const CartCard = ({ cartItem }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="flex justify-between w-full h-auto px-2 py-8 gap-2">
-      <div className="flex items-center gap-8 font-julius">
+    <div className="flex justify-between w-full h-auto px-2 py-8 gap-2 max-sm:flex-col">
+      <div className="flex items-center gap-8 font-julius flex-1 max-sm:flex-col max-sm:items-start max-sm:gap-4">
         <div>
           <img
             src={image}
@@ -20,7 +20,7 @@ const CartCard = ({ cartItem }) => {
         </div>
 
         <div className="flex flex-col gap-4">
-          <p className="text-lg">{name}</p>
+          <p className="text-lg max-sm:text-base">{name}</p>
           <div className="text-md flex gap-2">
             <p>₹{price}</p>
             <p className="line-through text-zinc-700">₹{originalPrice}</p>
@@ -28,7 +28,7 @@ const CartCard = ({ cartItem }) => {
         </div>
       </div>
 
-      <div className="flex justify-between w-1/3 items-center">
+      <div className="flex justify-between items-center gap-16 max-sm:flex-col max-sm:w-full max-sm:items-start max-sm:gap-2">
         <div className="flex items-center border border-zinc-900/20 px-4 py-2 font-julius">
           <button
             className="text-xl hover:font-bold"
@@ -47,6 +47,8 @@ const CartCard = ({ cartItem }) => {
           </button>
         </div>
 
+        <div className="flex justify-between gap-16 w-full items-center max-sm:gap-4">
+
         <SecondaryButton
           label="Add To Wishlist"
           onClick={() => {
@@ -59,6 +61,7 @@ const CartCard = ({ cartItem }) => {
           <button onClick={() => dispatch(REMOVE_FROM_CART(cartItem))}>
             <i class="fa-solid fa-trash hover:text-red-600"></i>
           </button>
+        </div>
         </div>
       </div>
     </div>

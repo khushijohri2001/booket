@@ -42,7 +42,7 @@ const SingleProducts = () => {
   const wishList = useSelector((store) => store.wishlist.wishList);
 
   return (
-    <div className="py-16 px-36 bg-[#eec6c6]  w-full">
+    <div className="py-16 px-36 bg-[#eec6c6] w-full">
       <div className="flex justify-evenly gap-1">
         {/* product image */}
 

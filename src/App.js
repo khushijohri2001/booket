@@ -24,7 +24,7 @@ import { MEDIA_MATCH_HANDLER } from "./redux/mediaMatchSlice";
 const App = () => {
   const { cartList } = useSelector((store) => store.cart);
   const dispatch = useDispatch();
-  const matches = useSelector((store) => store.mediaMatch.matches);
+  // const matches = useSelector((store) => store.mediaMatch.matches);
 
   useEffect(() => {
     try {
@@ -32,11 +32,14 @@ const App = () => {
       dispatch(TOTAL_ORIGINAL_PRICE_HANDLER());
       dispatch(TOTAL_PRICE_HANDLER());
       dispatch(TOTAL_DISCOUNT_PRICE_HANDLER());
-      dispatch(MEDIA_MATCH_HANDLER());
     } catch {
       console.log("error");
     }
-  }, [cartList, matches, dispatch]);
+  }, [cartList, dispatch]);
+
+  useEffect(() => {
+    dispatch(MEDIA_MATCH_HANDLER());
+  })
 
   return (
     <>

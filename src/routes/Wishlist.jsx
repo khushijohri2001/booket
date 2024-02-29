@@ -5,7 +5,7 @@ import { EmptyList, WishlistWithItems } from '../components'
 const Wishlist = () => {
   const wishList = useSelector(store => store.wishlist.wishList)
   return (
-    <div className="bg-[#eec6c6] py-16 px-8 w-screen ">
+    <div className="bg-[#eec6c6] py-16 px-8 w-screen max-sm:px-4 max-py-4">
     {wishList.length === 0 ? (
       <EmptyList label="Wishlist"/>
     ) : (

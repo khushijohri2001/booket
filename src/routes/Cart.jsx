@@ -6,7 +6,7 @@ const Cart = () => {
   const cartList = useSelector((store) => store.cart.cartList);
 
   return (
-    <div className="bg-[#eec6c6] py-16 px-8 w-screen ">
+    <div className="bg-[#eec6c6] py-16 px-8 w-screen max-sm:px-4 max-py-4">
       {cartList.length === 0 ? (
         <EmptyList label="Cart" />
       ) : (

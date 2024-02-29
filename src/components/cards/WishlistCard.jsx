@@ -9,8 +9,8 @@ const WishlistCard = ({ wishlistItem }) => {
     
     const dispatch = useDispatch();
     return (
-        <div className="flex justify-between w-full h-auto px-2 py-8 gap-2">
-          <div className="flex items-center gap-8 font-julius">
+        <div className="flex justify-between w-full h-auto px-2 py-8 gap-2 max-sm:flex-col">
+          <div className="flex items-center gap-8 font-julius max-sm:flex-col max-sm:items-start max-sm:gap-4">
             <div>
               <img
                 src={image}
@@ -20,7 +20,7 @@ const WishlistCard = ({ wishlistItem }) => {
             </div>
     
             <div className="flex flex-col gap-4">
-              <p className="text-lg">{name}</p>
+              <p className="text-lg max-sm:text-base">{name}</p>
               <div className="text-md flex gap-2">
                 <p>₹{price}</p>
                 <p className="line-through text-zinc-700">₹{originalPrice}</p>
@@ -28,7 +28,7 @@ const WishlistCard = ({ wishlistItem }) => {
             </div>
           </div>
     
-          <div className="flex justify-between w-[18%] items-center">
+          <div className="flex justify-between w-[18%] items-center max-sm:justify-normal max-sm:w-full max-sm:items-start max-sm:gap-4">
     
             <SecondaryButton
               label="Move To Cart"

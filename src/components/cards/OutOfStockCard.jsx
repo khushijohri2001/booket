@@ -5,7 +5,7 @@ const OutOfStockCard = ({ productInfo }) => {
 
   return (
     <div
-      className="flex flex-col w-64 h-auto relative  font-serif p-4 rounded-sm opacity-50 font-bold hover:bg-white"
+      className="flex flex-col w-64 h-auto relative  font-serif p-4 rounded-sm opacity-50 font-bold hover:bg-white "
       key={id}
     >
       <img

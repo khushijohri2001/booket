@@ -48,7 +48,7 @@ const Products = () => {
 
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 relative max-sm:flex-col max-sm:gap-0">
       <div>
         <Filter />
       </div>
@@ -56,7 +56,7 @@ const Products = () => {
      <>
      {
       isLoading || filteredProductList.length === 0 ? <h1 className="mx-8">No Products Found</h1> : (
-        <div className="my-4 flex flex-wrap mx-8 gap-8 ">
+        <div className="my-4 flex flex-wrap mx-8 gap-8 max-sm:justify-center max-sm:mt-24">
         {filteredProductList.map((product) => {
           const {id, availablity } = product;
 

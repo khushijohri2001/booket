@@ -3,8 +3,8 @@ import { SecondaryButton } from "./Buttons";
 
 const EmptyList = ({label}) => {
   return (
-    <div className="flex flex-col items-center h-full max-h-screen justify-center mx-auto my-28 gap-16">
-      <h1 className="mx-auto font-extrabold text-3xl font-julius">
+    <div className="flex flex-col items-center h-full max-h-screen justify-center mx-auto my-28 gap-16 max-sm:my-20">
+      <h1 className="mx-auto font-extrabold text-3xl font-julius max-sm:text-2xl">
         Your {label} is Empty
       </h1>
       <SecondaryButton path="/products" label="Continue Shopping" center />

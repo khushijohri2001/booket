@@ -12,7 +12,7 @@ const CartDetails = () => {
 
   return (
     <div className="flex flex-col gap-4 items-end">
-        <div className="w-96 p-4">
+        <div className="w-96 p-4 max-sm:w-full max-sm:p-0">
           <p className="text-2xl mb-2 font-extrabold font-playfairDisplay">Cart details</p>
           <hr color="grey" size="1" />
 
