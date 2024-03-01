@@ -3,13 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const mediaMatchSlice = createSlice({
     name: "mediaMatchSlice",
     initialState: {
-        matches: window.matchMedia("(min-width: 480px)").matches
+        isMobileView: false,
     },
     reducers: {
-        MEDIA_MATCH_HANDLER: (state) => {
-            window
-            .matchMedia("(min-width: 480px)")
-            .addEventListener('change', e => state.matches =  e.state.matches);
+        MEDIA_MATCH_HANDLER: (state, action) => {
+            state.isMobileView = action.payload
           }
     }
 })

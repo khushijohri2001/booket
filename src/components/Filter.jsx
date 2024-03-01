@@ -18,11 +18,11 @@ const Filter = () => {
 
   const dispatch = useDispatch();
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const matches = useSelector(store => store.mediaMatch.matches)
+  const isMobileView = useSelector(store => store.mediaMatch.isMobileView)
 
   useEffect(() => {
-    matches && setIsFilterOpen(true)
-  }, [matches])
+    isMobileView && setIsFilterOpen(true)
+  }, [isMobileView])
 
   return (
     <div className={`ml-2 my-5 p-2 border-none max-h-auto w-56 sticky top-44 z-50 bg-[#eec6c6] font-sans max-sm:top-32 max-sm:mx-0 max-sm:my-0 max-sm:fixed max-sm:w-screen`}>

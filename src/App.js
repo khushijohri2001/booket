@@ -22,11 +22,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { MEDIA_MATCH_HANDLER } from "./redux/mediaMatchSlice";
 import { ALL_PRODUCT_LIST_HANDLER } from "./redux/productSlice";
 import data from "./utils/data";
+import { useWindowSize } from "./custom-hooks/CustomHook";
 
 const App = () => {
   const { cartList } = useSelector((store) => store.cart);
   const dispatch = useDispatch();
-  // const matches = useSelector((store) => store.mediaMatch.matches);
+  const [width, height] = useWindowSize()
 
   useEffect(() => {
     try {
@@ -41,7 +42,17 @@ const App = () => {
   }, [cartList, dispatch]);
 
   useEffect(() => {
-    dispatch(MEDIA_MATCH_HANDLER());
+    try{
+      if(width <= 480){
+      dispatch(MEDIA_MATCH_HANDLER(true));
+     } else{
+      dispatch(MEDIA_MATCH_HANDLER(false));
+     }
+    } catch {
+      console.log("error");
+    }
+
+
   })
 
   return (

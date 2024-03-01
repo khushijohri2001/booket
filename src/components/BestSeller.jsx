@@ -10,7 +10,7 @@ const BestSeller = () => {
         Bestsellers
       </h1>
 
-      <div className="flex justify-between flex-wrap max-sm:items-center max-sm:justify-center">
+      <div className="flex justify-between flex-wrap max-sm:items-center max-sm:justify-center max-sm:gap-8">
         {data.map(
           (product) =>
             product.type === "Best Seller" && (
