@@ -1,12 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import {
-  ADD_TO_CART,
-  DECREMENT,
-  INCREMENT,
-  REMOVE_FROM_CART,
-} from "../redux/cartSlice";
+import { ADD_TO_CART, REMOVE_FROM_CART } from "../redux/cartSlice";
 import {
   AddToCartButton,
   RemoveFromCartButton,
@@ -23,8 +18,8 @@ import data from "../utils/data";
 
 const SingleProducts = () => {
   const dispatch = useDispatch();
-  const {productId} = useParams();
-  const productInfo = getProductInfoById(productId, data)
+  const { productId } = useParams();
+  const productInfo = getProductInfoById(productId, data);
 
   const {
     id,
@@ -34,27 +29,24 @@ const SingleProducts = () => {
     originalPrice,
     rating,
     category,
-    quantity,
     description,
+    availablity
   } = productInfo[0];
-  
+
   const cartList = useSelector((store) => store.cart.cartList);
   const wishList = useSelector((store) => store.wishlist.wishList);
 
   return (
-    <div className="py-16 px-36 bg-[#eec6c6] w-full">
-      <div className="flex justify-evenly gap-1">
-        {/* product image */}
-
-        <div className="w-full">
+    <div className="py-16 px-36 bg-[#eec6c6] w-full max-sm:px-4 ">
+      <div className="flex justify-evenly gap-1 max-sm:flex-col max-sm:items-center max-sm:gap-8">
+        <div className="w-full max-sm:w-auto">
           <img
             src={image}
             alt={name}
-            className="border-2 border-white h-[34rem] w-[34rem] object-cover"
+            className="border-2 border-white h-[34rem] w-[34rem] object-cover max-sm:w-64 max-sm:h-64"
           />
         </div>
 
-        {/* product content */}
         <div className="w-3/4 flex flex-col gap-6 font-sans">
           <div>
             <p className="text-sm font-extralight">{category}</p>
@@ -77,35 +69,17 @@ const SingleProducts = () => {
             <p className="text-sm font-extralight">Tax Included</p>
           </div>
 
-          <div>
-            <p className="font-extralight">Quantity</p>
-            <div className="flex items-center border border-zinc-900/20 px-4 py-2 font-julius w-28">
-              <button
-                className="text-xl hover:font-bold"
-                onClick={() => dispatch(DECREMENT(id))}
-              >
-                -
-              </button>
-              <p className="bg-transparent text-black text-center w-16">
-                {quantity}
-              </p>
-              <button
-                className="text-xl hover:font-bold"
-                onClick={() => dispatch(INCREMENT(id))}
-              >
-                +
-              </button>
-            </div>
-          </div>
-
           <div className="flex flex-col gap-2">
-            <div>
-              {cartList.some((cartItem) => cartItem.id === id) ? (
+            {
+              availablity === "In Stock" ? (
+                <>
+                <div>
+              {cartList.some((cartItem) => cartItem.id === productId) ? (
                 <RemoveFromCartButton
                   large
                   onClick={(e) => {
                     e.preventDefault();
-                    dispatch(REMOVE_FROM_CART(data.productInfo));
+                    dispatch(REMOVE_FROM_CART(data.id));
                   }}
                 />
               ) : (
@@ -113,7 +87,7 @@ const SingleProducts = () => {
                   large
                   onClick={(e) => {
                     e.preventDefault();
-                    dispatch(ADD_TO_CART(data.productInfo));
+                    dispatch(ADD_TO_CART(data.id));
                   }}
                 />
               )}
@@ -122,6 +96,14 @@ const SingleProducts = () => {
             <div>
               <SecondaryButton label="Buy Now" large border />
             </div>
+                </>
+              ) 
+              :
+
+                <SecondaryButton label="Out of stock" large border disable />
+         
+                
+            }
           </div>
 
           <div className="mt-2">
@@ -168,13 +150,11 @@ const SingleProducts = () => {
         </div>
       </div>
 
-     {
-        category && (
-            <div className="mt-40">
-            <YouMayAlsoLike currentCategory={category} id={id} />
-          </div>
-        )
-     }
+      {category && (
+        <div className="mt-40">
+          <YouMayAlsoLike currentCategory={category} id={id} />
+        </div>
+      )}
     </div>
   );
 };

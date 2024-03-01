@@ -1,9 +1,8 @@
-import { v4 as uuid } from "uuid";
 import { bookmark1, bookmark2, bookmark3, bookmark4, bookmark5, bookmark6, journal1, journal2, journal3, notebook1, notebook10, notebook11, notebook12, notebook13, notebook2, notebook3, notebook4, notebook5, notebook6, notebook7, notebook8, notebook9 } from "../assets";
 
 const data = [
   {
-    id: uuid(),
+    id: "7a70f455-5b5b-4a6a-8ff7-181f14fe53cf",
     availablity: "In Stock",
     image: bookmark1,
     name: "Dreams Don't Work Unless You Do Bookmark",
@@ -20,7 +19,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "29d3280b-e8c4-4fec-9a43-a680716afdef",
     availablity: "Out of Stock",
     image: bookmark2,
     name: "Your word is lamp to my feet Bookmark",
@@ -36,7 +35,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "4d89f7b2-cdb5-4a13-8b4c-0d9f595c0e85",
     availablity: "In Stock",
     image: bookmark3,
     name: "Midnight Blossom Bookmark",
@@ -52,7 +51,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "42dbe928-0cf3-4fe9-aec6-55c9c6806b63",
     availablity: "In Stock",
     image: bookmark4,
     name: "Abstract Floral Bookmark",
@@ -68,7 +67,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "ac598b65-b5b3-4ba2-b531-e69560ef57da",
     availablity: "Out of Stock",
     image: bookmark5,
     name: "Bookmark for Readers",
@@ -84,7 +83,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "fe0c8966-361e-4398-8e71-fdf8cf1ee0cd",
     availablity: "In Stock",
     image: bookmark6,
     name: "Peaceful Buddha Bookmark",
@@ -100,7 +99,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "eeee048c-00c5-4cd4-b3fd-d260b95a5915",
     availablity: "In Stock",
     image: notebook1,
     name: "Genius Reusable Notebook",
@@ -116,7 +115,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "e3e9f64a-5c22-4059-afde-4f0df61b22f0",
     availablity: "In Stock",
     image: notebook2,
     name: "Deathnote Reusable Notebook",
@@ -132,7 +131,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "72dcb7d8-b393-42c6-99de-752c1e2e941d",
     availablity: "Out of Stock",
     image: notebook3,
     name: "Sh*t Done Reusable Notebook",
@@ -147,7 +146,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "50a0bc34-b885-47e3-b565-7d9d6e3e73bf",
     availablity: "In Stock",
     image: notebook4,
     name: "Don't Stop Reusable Notebook",
@@ -163,7 +162,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "9fdb2ce1-1949-4309-a29d-bae4f3e6221c",
     availablity: "In Stock",
     image: notebook5,
     name: "F.R.I.E.N.D.S Reusable Notebook",
@@ -178,7 +177,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "6039e9e0-dd86-4462-81b5-d4f0d0beb5b8",
     availablity: "Out of Stock",
     image: notebook6,
     name: "Never Give Up Reusable Notebook",
@@ -193,7 +192,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "df9d056f-6d1e-487a-bbb0-01a2d635d1c2",
     availablity: "In Stock",
     image: notebook7,
     name: "Paanic Reusable Notebook",
@@ -208,7 +207,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "56046e60-751a-4177-b02b-88b488965d7e",
     availablity: "In Stock",
     image: notebook8,
     name: "Wondering Woman Reusable Notebook",
@@ -223,7 +222,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "62e04c66-56de-48bc-87d0-bee7617b47b9",
     availablity: "In Stock",
     image: notebook9,
     name: "Basanti Reusable Notebook",
@@ -238,7 +237,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "cecb2944-5120-4664-9f25-5d6690a369ec",
     availablity: "In Stock",
     image: notebook10,
     name: "Learn and Earn Reusable Notebook",
@@ -253,7 +252,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "967db68e-b8ed-47c4-b92d-2d34cf2d30b6",
     availablity: "In Stock",
     image: notebook11,
     name: "Bhukkadh Reusable Notebook",
@@ -268,7 +267,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "90653ec3-4c6d-4cdb-8c91-299641105a0b",
     availablity: "Out of Stock",
     image: notebook12,
     name: "Coffee Reusable Notebook",
@@ -283,7 +282,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "5154f57e-080e-4609-a839-4cdab6f8c4a8",
     availablity: "In Stock",
     image: notebook13,
     name: "Today I am Grateful Reusable Notebook",
@@ -298,7 +297,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "7f74e058-f124-459a-9f7c-0836ed43b351",
     availablity: "In Stock",
     image: journal1,
     name: "Kawai Spiral Journal",
@@ -311,7 +310,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "d61e64c4-8e84-499f-b800-b1a80e91e65c",
     availablity: "In Stock",
     image: journal2,
     name: "Personalised Journal",
@@ -324,7 +323,7 @@ const data = [
     quantity: 1
   },
   {
-    id: uuid(),
+    id: "f8423fe2-45ed-41b5-a8d3-42843b30db47",
     availablity: "In Stock",
     image: journal3,
     name: "Bright & Early Productivity Journal",

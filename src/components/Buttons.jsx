@@ -14,14 +14,15 @@ export const PrimaryButton = ({ path, label, center }) => {
   );
 };
 
-export const SecondaryButton = ({ path, label, center, onClick, large, border }) => {
+export const SecondaryButton = ({ path, label, center, onClick, large, border, disable }) => {
   return (
     <Link to={path}>
       <button
       onClick={onClick}
         className={`${
           center && "mx-auto"
-        } ${large && "w-full"} ${border && "border border-black"} px-4 py-2 text-lg cursor-pointer bg-rose-100 hover:bg-white max-sm:text-base max-sm:py-1 max-sm:px-2`}
+        } ${large && "w-full"} ${border && "border border-black"} ${disable && "cursor-not-allowed opacity-50 border-none"} px-4 py-2 text-lg cursor-pointer bg-rose-100 hover:bg-white max-sm:text-base max-sm:py-1 max-sm:px-2`}
+        disabled={disable}
       >
         {label}
       </button>
@@ -48,7 +49,7 @@ export const AddToCartButton = ({ onClick, large }) => {
     <>
       <button
         onClick={onClick}
-        className={` ${large ? 'w-full text-lg py-2' : 'text-xs py-1'} border border-rose-200 px-2  bg-rose-50 transition-all delay-150 hover:bg-rose-200 hover:text-white`}
+        className={` ${large ? 'w-full text-lg py-2' : 'text-xs py-1'} border border-rose-200 px-2  bg-rose-50 transition-all delay-150 hover:bg-rose-200 hover:text-white max-sm:text-base max-sm:py-1 max-sm:px-2`}
       >
         Add to cart
       </button>
@@ -59,7 +60,7 @@ export const AddToCartButton = ({ onClick, large }) => {
 export const RemoveFromCartButton = ({ onClick, large }) => {
   return (
     <>
-      <button onClick={onClick} className={` ${large ? 'w-full text-lg py-2' : 'text-xs py-1'} border border-rose-900 px-2 py-1 bg-rose-900 text-rose-50 transition-all delay-150 hover:bg-rose-200 hover:text-rose-900`}>
+      <button onClick={onClick} className={` ${large ? 'w-full text-lg py-2' : 'text-xs py-1'} border border-rose-900 px-2 py-1 bg-rose-900 text-rose-50 transition-all delay-150 hover:bg-rose-200 hover:text-rose-900 max-sm:text-base max-sm:py-1 max-sm:px-2`}>
         Remove from Cart
       </button>
     </>

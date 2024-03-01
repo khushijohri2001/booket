@@ -8,7 +8,7 @@ export const currentYear = () => {
     return year;
 }
 
-export const getProductInfoById = (id, data) => data.filter(product => product.id === id)
+export const getProductInfoById = (id, data) => data.filter(product => id ===  product.id)
 
 export const filterProducts = (data, priceRange, byRating, searchQuery, sort, byStock, byBookmark, byNotebook) => {
     let sortedProducts = data.map((products) => {
@@ -65,4 +65,4 @@ export const filterProducts = (data, priceRange, byRating, searchQuery, sort, by
     return sortedProducts;
   };
 
-  export const randomNumberGenerator = (first, last) => Number(Math.floor((Math.random() * (last - first)) + first))
+  export const randomNumberGenerator = (first, last) => Number(Math.floow((Math.random() * (last - first)) + first))

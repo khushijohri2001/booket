@@ -20,6 +20,8 @@ import {
 } from "./redux/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { MEDIA_MATCH_HANDLER } from "./redux/mediaMatchSlice";
+import { ALL_PRODUCT_LIST_HANDLER } from "./redux/productSlice";
+import data from "./utils/data";
 
 const App = () => {
   const { cartList } = useSelector((store) => store.cart);
@@ -32,6 +34,7 @@ const App = () => {
       dispatch(TOTAL_ORIGINAL_PRICE_HANDLER());
       dispatch(TOTAL_PRICE_HANDLER());
       dispatch(TOTAL_DISCOUNT_PRICE_HANDLER());
+      dispatch(ALL_PRODUCT_LIST_HANDLER(data))
     } catch {
       console.log("error");
     }

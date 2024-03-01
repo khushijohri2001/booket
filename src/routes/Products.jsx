@@ -5,7 +5,6 @@ import data from "../utils/data";
 import { filterProducts } from "../utils/functions";
 import { useDispatch, useSelector } from "react-redux";
 import { FILTERED_PRODUCT_LIST_HANDLER } from "../redux/productSlice";
-import { Link } from "react-router-dom";
 
 const Products = () => {
   const dispatch = useDispatch()
@@ -34,7 +33,7 @@ const Products = () => {
       byBookmark,
       byNotebook
     );
-
+   
     dispatch(FILTERED_PRODUCT_LIST_HANDLER(filteredData));
     setIsLoading(false)
 
@@ -63,9 +62,9 @@ const Products = () => {
           return (
             <div key={id}>
               {availablity === "In Stock" ? (
-                <Link to={id}><ProductCard productInfo={product}  /></Link>
+                <ProductCard productInfo={product}  />
               ) : (
-               <Link to={id}> <OutOfStockCard productInfo={product} /></Link>
+               <OutOfStockCard productInfo={product} />
               )}
             </div>
           );

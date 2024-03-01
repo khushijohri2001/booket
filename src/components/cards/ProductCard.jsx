@@ -13,6 +13,7 @@ import {
   ADD_TO_WISHLIST,
   REMOVE_FROM_WISHLIST,
 } from "../../redux/wishlistSlice";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ productInfo }) => {
   const { id, image, name, price, originalPrice, rating } = productInfo;
@@ -20,9 +21,11 @@ const ProductCard = ({ productInfo }) => {
   const cartList = useSelector((store) => store.cart.cartList);
   const wishList = useSelector((store) => store.wishlist.wishList);
 
+
   return (
+    <Link to={id}>
     <div
-      className="flex flex-col w-64 h-auto relative font-serif p-4 rounded-sm cursor-pointer hover:bg-[#fef4f2]"
+      className="flex flex-col w-64 h-auto relative font-serif p-4 rounded-sm cursor-pointer hover:bg-[#fef4f2] max-sm:bg-[#fef4f2]"
       key={id}
     >
       <div>
@@ -94,6 +97,7 @@ const ProductCard = ({ productInfo }) => {
         )}
       </div>
     </div>
+    </Link>
   );
 };
 

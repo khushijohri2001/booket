@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const OutOfStockCard = ({ productInfo }) => {
   const { id, image, name} = productInfo;
 
   return (
+    <Link to={id}>
     <div
       className="flex flex-col w-64 h-auto relative  font-serif p-4 rounded-sm opacity-50 font-bold hover:bg-white "
       key={id}
@@ -20,6 +22,7 @@ const OutOfStockCard = ({ productInfo }) => {
         <p className="font-bold z-10 m-auto text-lg pt-4p">Out of Stock</p>
       </div>
     </div>
+    </Link>
   );
 };
 
