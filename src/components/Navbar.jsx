@@ -7,6 +7,7 @@ import { NavlinkButton } from "./Buttons";
 import { FILTER_BY_SEARCH } from "../redux/filterSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { MENU_HANDLER } from "../redux/menuSlice";
+import { animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ const Navbar = () => {
             src={logo}
             alt="Booklet Logo"
             className="w-28 hover:scale-105 max-sm:w-20"
+            onClick={() => scroll.scrollToTop(0)}
           />
         </Link>
       </div>

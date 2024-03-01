@@ -21,7 +21,8 @@ const Filter = () => {
   const isMobileView = useSelector(store => store.mediaMatch.isMobileView)
 
   useEffect(() => {
-    isMobileView && setIsFilterOpen(true)
+    isMobileView ? setIsFilterOpen(false) : setIsFilterOpen(true)
+    
   }, [isMobileView])
 
   return (
