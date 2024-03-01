@@ -82,7 +82,7 @@ const SingleProducts = () => {
                   large
                   onClick={(e) => {
                     e.preventDefault();
-                    dispatch(REMOVE_FROM_CART(data.id));
+                    dispatch(REMOVE_FROM_CART(productInfo[0]));
                   }}
                 />
               ) : (
@@ -90,7 +90,7 @@ const SingleProducts = () => {
                   large
                   onClick={(e) => {
                     e.preventDefault();
-                    dispatch(ADD_TO_CART(data.id));
+                    dispatch(ADD_TO_CART(productInfo[0]));
                   }}
                 />
               )}
@@ -132,7 +132,7 @@ const SingleProducts = () => {
                   <RemoveFromWishlistButton
                     dark
                     onClick={() =>
-                      dispatch(REMOVE_FROM_WISHLIST(data.productInfo))
+                      dispatch(REMOVE_FROM_WISHLIST(productInfo[0]))
                     }
                   />
                   <Link to="/wishlist">
@@ -143,7 +143,9 @@ const SingleProducts = () => {
                 <>
                   <WishlistButton
                     dark
-                    onClick={() => dispatch(ADD_TO_WISHLIST(data.productInfo))}
+                    onClick={() => 
+                      dispatch(ADD_TO_WISHLIST(productInfo[0]))
+                    }
                   />
                   <p>Add to Wishlist</p>
                 </>
