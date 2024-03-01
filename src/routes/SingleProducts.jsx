@@ -113,7 +113,7 @@ const SingleProducts = () => {
             <RWebShare
               data={{
                 text: "Shop Now on Booklet",
-                url: "http://booklet-c1aa8.web.app/:3000/products/" + id,
+                url: "http://booklet-c1aa8.web.app/products/" + id,
                 title: name,
               }}
             >
