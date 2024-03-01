@@ -45,6 +45,10 @@ const Products = () => {
     byBookmark,
     byNotebook]);
 
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    })
+
 
   return (
     <div className="flex gap-6 relative max-sm:flex-col max-sm:gap-0">

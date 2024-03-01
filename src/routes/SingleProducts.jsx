@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../redux/cartSlice";
@@ -20,6 +20,9 @@ const SingleProducts = () => {
   const dispatch = useDispatch();
   const { productId } = useParams();
   const productInfo = getProductInfoById(productId, data);
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const {
     id,

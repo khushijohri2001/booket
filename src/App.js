@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import { Footer } from "./components";
+import { animateScroll as scroll } from "react-scroll";
 import {
   About,
   Cart,
@@ -55,6 +56,10 @@ const App = () => {
 
 
   })
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <>
