@@ -24,6 +24,9 @@ import { MEDIA_MATCH_HANDLER } from "./redux/mediaMatchSlice";
 import { ALL_PRODUCT_LIST_HANDLER } from "./redux/productSlice";
 import data from "./utils/data";
 import { useWindowSize } from "./custom-hooks/CustomHook";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "./firebaseConfig";
+import Signin from "./routes/Signin";
 
 const App = () => {
   const { cartList } = useSelector((store) => store.cart);
@@ -44,7 +47,6 @@ const App = () => {
 
   useEffect(() => {
     try{
-      console.log(width);
       if(width <= 480){
       dispatch(MEDIA_MATCH_HANDLER(true));
      } else{
@@ -59,6 +61,8 @@ const App = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    logEvent(analytics, {eventName: "Booklet visited"})
+
   }, [])
 
   return (
@@ -94,16 +98,21 @@ export const appRouter = createBrowserRouter([
         path: "/cart",
         element: <Cart />,
       },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/signin",
+        element: <Signin/>
+      }
     ],
   },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
-  },
+  
 ]);
 
 export default App;

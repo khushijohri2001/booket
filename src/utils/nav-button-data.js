@@ -1,19 +1,25 @@
 export const navButtonData = [
     {
         id: 1,
-        label: "About",
-        path: "about"
+        label: "Products",
+        path: "products"
     },
     {
         id: 2,
+        label: "Signin",
+        path: "signin"
+    },
+    {
+        id: 3,
         label: "Contact",
         path: "contact"
     },
     {
-        id: 3,
-        label: "Signin",
-        path: "signin"
+        id: 4,
+        label: "About",
+        path: "about"
     },
+    
 ]
 
 export const navButtonHamburgerData = [
@@ -24,22 +30,22 @@ export const navButtonHamburgerData = [
     },
     {
         id: 2,
-        label: "About",
-        path: "about"
-    },
-    {
-        id: 3,
         label: "Products",
         path: "products"
     },
     {
-        id: 4,
+        id: 3,
         label: "Signin",
         path: "signin"
     },
     {
-        id: 5,
+        id: 4,
         label: "Contact",
         path: "contact"
+    },
+    {
+        id: 5,
+        label: "About",
+        path: "about"
     },
 ]

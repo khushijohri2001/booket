@@ -42,7 +42,7 @@ const WishlistCard = ({ wishlistItem }) => {
               <button 
               onClick={() => dispatch(REMOVE_FROM_WISHLIST(wishlistItem))}
               >
-                <i class="fa-solid fa-trash hover:text-red-600"></i>
+                <i className="fa-solid fa-trash hover:text-red-600"></i>
               </button>
             </div>
           </div>

@@ -59,7 +59,7 @@ const CartCard = ({ cartItem }) => {
 
         <div>
           <button onClick={() => dispatch(REMOVE_FROM_CART(cartItem))}>
-            <i class="fa-solid fa-trash hover:text-red-600"></i>
+            <i className="fa-solid fa-trash hover:text-red-600"></i>
           </button>
         </div>
         </div>

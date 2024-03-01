@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ACTIVE_LINK_HANDLER } from "../../redux/activeLinkSlice";
+import { useDispatch } from "react-redux";
 
 const OutOfStockCard = ({ productInfo }) => {
   const { id, image, name} = productInfo;
+  const dispatch = useDispatch();
 
   return (
-    <Link to={id}>
+    <Link to={id} onClick={() => dispatch(ACTIVE_LINK_HANDLER(id))}>
     <div
       className="flex flex-col w-64 h-auto relative  font-serif p-4 rounded-sm opacity-50 font-bold hover:bg-white "
       key={id}

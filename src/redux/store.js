@@ -5,6 +5,7 @@ import cartSlice from "./cartSlice";
 import wishlistSlice from "./wishlistSlice";
 import menuSlice from "./menuSlice";
 import mediaMatchSlice from "./mediaMatchSlice";
+import activeLinkSlice from "./activeLinkSlice";
 
 export const store = configureStore({
     reducer: {
@@ -13,6 +14,7 @@ export const store = configureStore({
         cart: cartSlice,
         wishlist: wishlistSlice,
         menu: menuSlice,
-        mediaMatch: mediaMatchSlice
+        mediaMatch: mediaMatchSlice,
+        activeLink: activeLinkSlice
     }
 })

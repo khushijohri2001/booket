@@ -8,12 +8,14 @@ import { FILTER_BY_SEARCH } from "../redux/filterSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { MENU_HANDLER } from "../redux/menuSlice";
 import { animateScroll as scroll } from "react-scroll";
+import { ACTIVE_LINK_HANDLER } from "../redux/activeLinkSlice";
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const { totalItemQuantity } = useSelector((store) => store.cart);
   const wishList = useSelector((store) => store.wishlist.wishList);
   const isMenuOpen = useSelector((store) => store.menu.isMenuOpen);
+  const active = useSelector((store) => store.activeLink.active)
 
   return (
     <div className="flex justify-between items-center py-3 gap-2 bg-[#fae9e6] px-12 shadow-md max-sm:px-4 max-sm:py-1 max-sm:justify-normal">
@@ -23,7 +25,10 @@ const Navbar = () => {
             src={logo}
             alt="Booklet Logo"
             className="w-28 hover:scale-105 max-sm:w-20"
-            onClick={() => scroll.scrollToTop(0)}
+            onClick={() => {
+              scroll.scrollToTop(0);
+              dispatch(ACTIVE_LINK_HANDLER("home"))
+            }}
           />
         </Link>
       </div>
@@ -43,14 +48,14 @@ const Navbar = () => {
       <div className="flex items-center gap-1">
         <div className="flex items-center justify-around gap-1 max-sm:hidden">
           {navButtonData.map((btnInfo) => (
-            <NavlinkButton key={btnInfo.id} btnInfo={btnInfo} />
+            <NavlinkButton key={btnInfo.id} btnInfo={btnInfo} active={active} />
           ))}
         </div>
 
         <div className="my-0 mx-2 hover:scale-105">
           <Badge badgeContent={wishList.length}>
             <NavLink to="/wishlist">
-              <i class="fa-regular fa-heart text-xl "></i>
+              <i className="fa-regular fa-heart text-xl "></i>
             </NavLink>
           </Badge>
         </div>
@@ -58,7 +63,7 @@ const Navbar = () => {
         <div className="my-0 mx-2 hover:scale-105">
           <NavLink to="/cart">
             <Badge badgeContent={totalItemQuantity}>
-              <i class="fa-solid fa-cart-shopping text-xl"></i>
+              <i className="fa-solid fa-cart-shopping text-xl"></i>
             </Badge>
           </NavLink>
         </div>
@@ -72,7 +77,7 @@ const Navbar = () => {
           ></i>
         ) : (
           <i
-            class="fa-solid fa-bars text-xl"
+            className="fa-solid fa-bars text-xl"
             onClick={() => dispatch(MENU_HANDLER())}
           ></i>
         )}

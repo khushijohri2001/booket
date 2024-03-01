@@ -34,9 +34,9 @@ const Filter = () => {
           onClick={() => setIsFilterOpen(!isFilterOpen)}
         >
           {isFilterOpen ? (
-            <i class="fa-solid fa-angles-up"></i>
+            <i className="fa-solid fa-angles-up"></i>
           ) : (
-            <i class="fa-solid fa-angles-down"></i>
+            <i className="fa-solid fa-angles-down"></i>
           )}
         </button>
       </div>
@@ -53,7 +53,7 @@ const Filter = () => {
             <div className="p-2">
               <p className=" font-bold mb-3">CATEGORIES</p>
 
-              <div class="flex items-center mb-4">
+              <div className="flex items-center mb-4">
                 <input
                   type="checkbox"
                   value="Notebook"
@@ -63,12 +63,12 @@ const Filter = () => {
                   }}
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
                 />
-                <label class="ms-2 text-sm font-medium text-gray-900 ">
+                <label className="ms-2 text-sm font-medium text-gray-900 ">
                   Reusable Notebook
                 </label>
               </div>
 
-              <div class="flex items-center mb-4">
+              <div className="flex items-center mb-4">
                 <input
                   type="checkbox"
                   value="Bookmark"
@@ -78,12 +78,12 @@ const Filter = () => {
                   }}
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
                 />
-                <label class="ms-2 text-sm font-medium text-gray-900 ">
+                <label className="ms-2 text-sm font-medium text-gray-900 ">
                   Bookmarks
                 </label>
               </div>
 
-              <div class="flex items-center mb-4">
+              <div className="flex items-center mb-4">
                 <input
                   type="checkbox"
                   value="In Stock"
@@ -93,7 +93,7 @@ const Filter = () => {
                   }}
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
                 />
-                <label class="ms-2 text-sm font-medium text-gray-900 ">
+                <label className="ms-2 text-sm font-medium text-gray-900 ">
                   Include Out of Stock
                 </label>
               </div>
@@ -127,7 +127,7 @@ const Filter = () => {
             <div className="p-2">
               <p className="font-bold mb-3">SORT BY</p>
 
-              <div class="flex items-center mb-4">
+              <div className="flex items-center mb-4">
                 <input
                   id="radio-1"
                   type="radio"
@@ -141,7 +141,7 @@ const Filter = () => {
                   Low To High
                 </label>
               </div>
-              <div class="flex items-center">
+              <div className="flex items-center">
                 <input
                   checked={sort === "highToLow"}
                   id="radio-2"

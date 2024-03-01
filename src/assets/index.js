@@ -25,5 +25,6 @@ import newCollectionBanner from "./new-collection-banner.png"
 import savedPriceRibbon from "./save-price-ribbon.png"
 import welcomeBanner from "./welcome-banner.png"
 import mobileNewCollectionBanner from "./mobile-new-collection-banner.png"
+import contactImg from "./contact-img.svg"
 
-export {welcomeBanner, newCollectionBanner, mobileNewCollectionBanner, savedPriceRibbon, logo, bookmark1, bookmark2, bookmark3, bookmark4, bookmark5, bookmark6, notebook1, notebook2, notebook3, notebook4, notebook5, notebook6, notebook7, notebook8, notebook9, notebook10, notebook11, notebook12, notebook13, journal1, journal2, journal3}
+export {contactImg, welcomeBanner, newCollectionBanner, mobileNewCollectionBanner, savedPriceRibbon, logo, bookmark1, bookmark2, bookmark3, bookmark4, bookmark5, bookmark6, notebook1, notebook2, notebook3, notebook4, notebook5, notebook6, notebook7, notebook8, notebook9, notebook10, notebook11, notebook12, notebook13, journal1, journal2, journal3}

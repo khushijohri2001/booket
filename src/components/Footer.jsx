@@ -3,8 +3,12 @@ import { logo } from "../assets";
 import { Link } from "react-router-dom";
 import { currentYear } from "../utils/functions";
 import { socialMediaLinksData } from "../utils/social-media-link-data";
+import { ACTIVE_LINK_HANDLER } from "../redux/activeLinkSlice";
+import { useDispatch } from "react-redux";
 
 const Footer = () => {
+  const dispatch = useDispatch();
+
   return (
     <footer className="flex flex-col">
       <div className="flex justify-around py-16 px-56 bg-[#fae9e6] max-sm:flex-col max-sm:px-8 max-sm:gap-16">
@@ -16,16 +20,16 @@ const Footer = () => {
         <div className="flex justify-evenly w-full max-sm:gap-8 max-sm:justify-between">
           <div className="flex flex-col font-serif text-lg gap-1">
             <h2 className="font-julius text-4xl mb-4 font-bold max-sm:text-3xl max-sm:mb-2">Links</h2>
-            <Link to="products" className="hover:text-rose-900">
-              Shop
+            <Link to="products" className="hover:text-rose-900" onClick={() => dispatch(ACTIVE_LINK_HANDLER("products"))}>
+              Products
             </Link>
-            <Link to="/" className="hover:text-rose-900">
+            <Link to="/" className="hover:text-rose-900" onClick={() => dispatch(ACTIVE_LINK_HANDLER("/"))}>
               Home
             </Link>
-            <Link to="about" className="hover:text-rose-900">
+            <Link to="about" className="hover:text-rose-900" onClick={() => dispatch(ACTIVE_LINK_HANDLER("about"))}>
               About
             </Link>
-            <Link to="signin" className="hover:text-rose-900">
+            <Link to="signin" className="hover:text-rose-900" onClick={() => dispatch(ACTIVE_LINK_HANDLER("signin"))}>
               Signin
             </Link>
           </div>

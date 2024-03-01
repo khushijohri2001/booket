@@ -20,6 +20,7 @@ const SingleProducts = () => {
   const dispatch = useDispatch();
   const { productId } = useParams();
   const productInfo = getProductInfoById(productId, data);
+  
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -122,7 +123,7 @@ const SingleProducts = () => {
               }}
             >
               <div className="flex gap-3 items-center cursor-pointer">
-                <i class="fa-solid fa-share-nodes text-rose-900"></i> Share
+                <i className="fa-solid fa-share-nodes text-rose-900"></i> Share
               </div>
             </RWebShare>
 

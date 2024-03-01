@@ -1,8 +1,11 @@
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { ACTIVE_LINK_HANDLER } from "../redux/activeLinkSlice";
 
 export const PrimaryButton = ({ path, label, center }) => {
+  const dispatch = useDispatch();
   return (
-    <Link to={path}>
+    <Link to={path} onClick={() => dispatch(ACTIVE_LINK_HANDLER(path))}>
       <button
         className={`${
           center && "mx-auto"
@@ -30,13 +33,14 @@ export const SecondaryButton = ({ path, label, center, onClick, large, border, d
   )
 }
 
-export const NavlinkButton = ({ btnInfo }) => {
+export const NavlinkButton = ({ btnInfo, active }) => {
   const { path, label } = btnInfo;
+  const dispatch = useDispatch();
 
   return (
-    <Link to={path}>
+    <Link to={path} onClick={() => dispatch(ACTIVE_LINK_HANDLER(path))}>
       <div className="my-0 mx-2 hover:scale-105">
-        <button className=" font-julius font-extrabold box-border">
+        <button className={` ${active === path && "text-rose-900 underline underline-offset-8"} font-julius font-extrabold box-border`}>
           {label}
         </button>
       </div>
@@ -71,7 +75,7 @@ export const WishlistButton = ({ onClick, dark }) => {
   return (
     <>
       <button className={`${dark ? 'text-rose-900' : 'text-rose-300'} hover:scale-110 transition-all delay-150`} onClick={onClick}>
-        <i class="fa-regular fa-heart"></i>
+        <i className="fa-regular fa-heart"></i>
       </button>
     </>
   );
@@ -84,7 +88,7 @@ export const RemoveFromWishlistButton = ({ onClick, dark }) => {
         className="remove_from_wishlist-btn button-design-circle"
         onClick={onClick}
       >
-        <i class={`fa-solid fa-heart ${dark ? 'text-rose-900' : 'text-rose-300'}`}></i>
+        <i className={`fa-solid fa-heart ${dark ? 'text-rose-900' : 'text-rose-300'}`}></i>
       </button>
     </>
   );

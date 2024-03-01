@@ -14,6 +14,7 @@ import {
   REMOVE_FROM_WISHLIST,
 } from "../../redux/wishlistSlice";
 import { Link } from "react-router-dom";
+import { ACTIVE_LINK_HANDLER } from "../../redux/activeLinkSlice";
 
 const ProductCard = ({ productInfo }) => {
   const { id, image, name, price, originalPrice, rating } = productInfo;
@@ -23,7 +24,7 @@ const ProductCard = ({ productInfo }) => {
 
 
   return (
-    <Link to={id}>
+    <Link to={id} onClick={() => dispatch(ACTIVE_LINK_HANDLER(id))}>
     <div
       className="flex flex-col w-64 h-auto relative font-serif p-4 rounded-sm cursor-pointer hover:bg-[#fef4f2] max-sm:bg-[#fef4f2]"
       key={id}
@@ -53,11 +54,17 @@ const ProductCard = ({ productInfo }) => {
         <div>
           {wishList.some((wishlistItem) => wishlistItem.id === id) ? (
             <RemoveFromWishlistButton
-              onClick={() => dispatch(REMOVE_FROM_WISHLIST(productInfo))}
+              onClick={(e) => {
+                e.preventDefault();
+                dispatch(REMOVE_FROM_WISHLIST(productInfo))
+              }}
             />
           ) : (
             <WishlistButton
-              onClick={() => dispatch(ADD_TO_WISHLIST(productInfo))}
+              onClick={(e) => {
+                e.preventDefault();
+                dispatch(ADD_TO_WISHLIST(productInfo))
+              }}
             />
            )} 
         </div>
