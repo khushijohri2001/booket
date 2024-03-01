@@ -20,10 +20,10 @@ const SingleProducts = () => {
   const dispatch = useDispatch();
   const { productId } = useParams();
   const productInfo = getProductInfoById(productId, data);
-  
+
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   const {
     id,
@@ -34,7 +34,7 @@ const SingleProducts = () => {
     rating,
     category,
     description,
-    availablity
+    availablity,
   } = productInfo[0];
 
   const cartList = useSelector((store) => store.cart.cartList);
@@ -74,40 +74,35 @@ const SingleProducts = () => {
           </div>
 
           <div className="flex flex-col gap-2">
-            {
-              availablity === "In Stock" ? (
-                <>
+            {availablity === "In Stock" ? (
+              <>
                 <div>
-              {cartList.some((cartItem) => cartItem.id === productId) ? (
-                <RemoveFromCartButton
-                  large
-                  onClick={(e) => {
-                    e.preventDefault();
-                    dispatch(REMOVE_FROM_CART(productInfo[0]));
-                  }}
-                />
-              ) : (
-                <AddToCartButton
-                  large
-                  onClick={(e) => {
-                    e.preventDefault();
-                    dispatch(ADD_TO_CART(productInfo[0]));
-                  }}
-                />
-              )}
-            </div>
+                  {cartList.some((cartItem) => cartItem.id === productId) ? (
+                    <RemoveFromCartButton
+                      large
+                      onClick={(e) => {
+                        e.preventDefault();
+                        dispatch(REMOVE_FROM_CART(productInfo[0]));
+                      }}
+                    />
+                  ) : (
+                    <AddToCartButton
+                      large
+                      onClick={(e) => {
+                        e.preventDefault();
+                        dispatch(ADD_TO_CART(productInfo[0]));
+                      }}
+                    />
+                  )}
+                </div>
 
-            <div>
-              <SecondaryButton label="Buy Now" large border />
-            </div>
-                </>
-              ) 
-              :
-
-                <SecondaryButton label="Out of stock" large border disable />
-         
-                
-            }
+                <div>
+                  <SecondaryButton label="Buy Now" large border />
+                </div>
+              </>
+            ) : (
+              <SecondaryButton label="Out of stock" large border disable />
+            )}
           </div>
 
           <div className="mt-2">
@@ -118,7 +113,7 @@ const SingleProducts = () => {
             <RWebShare
               data={{
                 text: "Shop Now on Booklet",
-                url: "http://localhost:3000/products/" + id,
+                url: "http://booklet-c1aa8.web.app/:3000/products/" + id,
                 title: name,
               }}
             >
@@ -144,9 +139,7 @@ const SingleProducts = () => {
                 <>
                   <WishlistButton
                     dark
-                    onClick={() => 
-                      dispatch(ADD_TO_WISHLIST(productInfo[0]))
-                    }
+                    onClick={() => dispatch(ADD_TO_WISHLIST(productInfo[0]))}
                   />
                   <p>Add to Wishlist</p>
                 </>
