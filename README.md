@@ -53,11 +53,12 @@ Live Link: [Booklet](https://booklet-c1aa8.web.app/)
 ## Demonstration
 
 ### Home
-https://user-images.githubusercontent.com/65448358/160255054-ed30aabb-3bd0-43a3-850d-ea862af46a97.mp4
-
+<img width="1440" alt="Screenshot 2024-03-02 at 4 17 35 PM" src="https://github.com/khushijohri2001/booket/assets/65448358/2de500bc-5e6e-4064-8fa7-a0d41f34f389">
 
 ### Product Listing
-https://user-images.githubusercontent.com/65448358/160255059-0423e88f-07a5-49f1-aa38-dfa8d9e8dfdb.mp4
+<img width="1440" alt="Screenshot 2024-03-02 at 4 18 25 PM" src="https://github.com/khushijohri2001/booket/assets/65448358/f76abc1e-b3c1-431a-b4ea-95d4a1f4b49e">
+
+
 
 
 
