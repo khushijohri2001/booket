@@ -13,7 +13,9 @@ const ShopByCategory = () => {
         {data.map(
           (product) =>
             product.type === "By Categories" && (
-              <CategoryCard productInfo={product} />
+              <div key={product.id}>
+                <CategoryCard productInfo={product} />
+              </div>
             )
         )}
       </div>

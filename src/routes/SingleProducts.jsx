@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../redux/cartSlice";
@@ -17,6 +17,7 @@ import { getProductInfoById } from "../utils/functions";
 import data from "../utils/data";
 
 const SingleProducts = () => {
+  const [showMessage, setShowMessage] = useState(false);
   const dispatch = useDispatch();
   const { productId } = useParams();
   const productInfo = getProductInfoById(productId, data);
@@ -96,8 +97,22 @@ const SingleProducts = () => {
                   )}
                 </div>
 
-                <div>
-                  <SecondaryButton label="Buy Now" large border />
+                <div
+                  className="relative cursor-pointer"
+                  onMouseOver={() => setShowMessage(true)}
+                  onMouseOut={() => setShowMessage(false)}
+                >
+                  <div>
+                    <SecondaryButton label="Buy Now" large border />
+                  </div>
+                  <div
+                    className={`absolute -bottom-20 bg-[#ffe7e7] p-6 shadow-inner rounded transition ease-in-out delay-500 ${
+                      showMessage ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <i class="fa-solid fa-sort-up text-[#ffe7e7] rounded absolute -top-2 left-4 text-3xl"></i>
+                    <p className="font-bold">Feature Coming Soon</p>
+                  </div>
                 </div>
               </>
             ) : (
@@ -150,8 +165,8 @@ const SingleProducts = () => {
       </div>
 
       {category && (
-        <div className="mt-40">
-          <YouMayAlsoLike currentCategory={category} id={id} />
+        <div className="mt-40" key={id}>
+          <YouMayAlsoLike currentCategory={category} />
         </div>
       )}
     </div>

@@ -15,7 +15,7 @@ const YouMayAlsoLike = ({currentCategory, id}) => {
         <div className='flex items-center gap-10 flex-wrap max-sm:justify-center'>
             {
                 allProductList.filter((product) => (product.category === currentCategory) && (product.id !== id)).filter((product, index) => index < 4).map(product => (
-                  <div onClick={() => navigate('/products/'+product.id)}>
+                  <div onClick={() => navigate('/products/'+product.id)} key={product.id}>
                     <ProductCard productInfo={product}/>
                   </div>
                 ))

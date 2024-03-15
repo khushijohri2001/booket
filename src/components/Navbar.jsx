@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { logo } from "../assets";
 import { Link, NavLink } from "react-router-dom";
 import Badge from "./Badge";
@@ -11,6 +11,7 @@ import { animateScroll as scroll } from "react-scroll";
 import { ACTIVE_LINK_HANDLER } from "../redux/activeLinkSlice";
 
 const Navbar = () => {
+  const [showMessage, setShowMessage] =  useState(false)
   const dispatch = useDispatch();
   const { totalItemQuantity } = useSelector((store) => store.cart);
   const wishList = useSelector((store) => store.wishlist.wishList);
@@ -34,7 +35,7 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center justify-center h-24 max-sm:h-16">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center" onMouseOver={() => setShowMessage(true)} onMouseOut={() => setShowMessage(false)}>
           <input
             type="text"
             placeholder="What are you looking for?"
@@ -43,6 +44,10 @@ const Navbar = () => {
           />
           <i className="fa-solid fa-magnifying-glass cursor-pointer border-0 flex-grow rounded-r-3xl py-2 pr-6 bg-white max-sm:bg-transparent max-sm:pr-0 max-sm:py-0 max-sm:text-xl"></i>
         </div>
+        <div className={`absolute -bottom-10 left-72 bg-rose-400 text-white p-6 shadow-inner rounded transition ease-in-out delay-500 ${showMessage ? 'opacity-100' : 'opacity-0'}`}>
+          <i class="fa-solid fa-sort-up text-rose-400 rounded absolute -top-2 left-4 text-3xl"></i>
+           <p className='font-bold'>Feature Coming Soon</p> 
+            </div>
       </div>
 
       <div className="flex items-center gap-1">

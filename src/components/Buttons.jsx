@@ -9,7 +9,7 @@ export const PrimaryButton = ({ path, label, center }) => {
       <button
         className={`${
           center && "mx-auto"
-        } flex items-center gap-3 px-4 py-2 text-lg  border-2 border-black cursor-pointer bg-rose-100 hover:bg-white bg-transparent`}
+        } flex items-center gap-3 px-4 py-2 text-lg  border-2 border-black cursor-pointer bg-rose-100 transition ease-in-out delay-150 hover:bg-white bg-transparent`}
       >
         {label} <i className="fa-solid fa-arrow-right"></i>
       </button>
@@ -24,7 +24,7 @@ export const SecondaryButton = ({ path, label, center, onClick, large, border, d
       onClick={onClick}
         className={`${
           center && "mx-auto"
-        } ${large && "w-full"} ${border && "border border-black"} ${disable && "cursor-not-allowed opacity-50 border-none"} px-4 py-2 text-lg cursor-pointer bg-rose-100 hover:bg-white max-sm:text-base max-sm:py-1 max-sm:px-2`}
+        } ${large && "w-full"} ${border && "border border-black"} ${disable && "cursor-not-allowed opacity-50 border-none"} px-4 py-2 text-lg cursor-pointer bg-rose-100 transition ease-in-out delay-150 hover:bg-white max-sm:text-base max-sm:py-1 max-sm:px-2`}
         disabled={disable}
       >
         {label}

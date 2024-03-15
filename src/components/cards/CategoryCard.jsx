@@ -1,12 +1,10 @@
 import React from "react";
 import { PrimaryButton } from "../Buttons";
 
-const CategoryCard = ({ productInfo }) => {
-  const { id, image, name, category } = productInfo;
+const CategoryCard = ({ productInfo, key }) => {
+  const { image, name, category } = productInfo;
   return (
-    <div
-      className="flex flex-col gap-6 h-auto font-serif p-4 rounded-sm max-sm:gap-3"
-      key={id}
+    <div className="flex flex-col gap-6 h-auto font-serif p-4 rounded-sm max-sm:gap-3"
     >
       <img
         src={image}

@@ -14,7 +14,9 @@ const BestSeller = () => {
         {data.map(
           (product) =>
             product.type === "Best Seller" && (
-              <BestSellerCard productInfo={product} />
+              <div key={product.id}>
+                <BestSellerCard productInfo={product} />
+              </div>
             )
         )}
       </div>

@@ -41,7 +41,7 @@ const Footer = () => {
             >
               Email
             </a>
-            <Link to="about" className="hover:text-rose-900">
+            <Link to="contact" className="hover:text-rose-900">
               Contact
             </Link>
           </div>
