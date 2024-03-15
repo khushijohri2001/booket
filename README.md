@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Booklet
+The booklet is an E-commerce Store to purchase Designer Notebooks and accessories. It's a radiant realm where stationery dreams, delightful accessories, and chic lifestyle products come to life.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Link: [Booklet](https://booklet-c1aa8.web.app/)
 
-## Available Scripts
+## Features
+- Easy to use beautiful and Responsive UI.
+- Reusable, Testable, Modular Components.
+- Header Features: Announcement Bar, Search, Nav Links.
+- Home page Sections: New collection, Welcome, Image Carousel, Best Sellers, Shop by Category.
+- Product Listing Page with different Categories like Notebooks, Journal, Bookmarks and Poster.
+- Product Listing Page: Filter, All Products (Product Card)
+  - Filter: By Price, Sort by (Low to high and High to low), Rating, and Category.
+  - Product Card: Product Details, Add to Cart/Remove from Cart toggle button, Wishlist/Remove from Wishlist toggle button 
+- Single Product Page which has a detailed description of the Product.
+- Single Product Page Features: Product Details, Buy Now button, Share button, You May Also Like for Related products
+  - Share button: Copy the product link on the clipboard or share it on social media
+- Cart Page will have products you've added to the cart
+- Cart Page features: Product Listing, Billing, Checkout button
+  - Product Listing: Product details, increase/decrease quantity, Move to Wishlist button, Delete from cart
+  - Billing: Based on discounts, coupons, and product quantity
+  - Checkout button
+- Wishlist Page: Product listing of all products liked
+- Wishlist Feature: Product details, Move to Cart, Deleted from wishlist
+- Authentication Pages like Signup, Login, Log Out pages
+- Footer contains links to all the pages and my social media handles.
+- About Page has the details regarding the Booklet Store
+- Contact Page has links to email and social media handles. Reach out if you have any query
 
-In the project directory, you can run:
 
-### `npm start`
+## Tech Stack used
+- ReactJS
+- Redux
+- React Router v6
+- Custom Hooks
+- Tailwind CSS
+- Google Analytics
+- HTML
+- CSS
+- Javascript
+- Font Awesome
+- Firebase
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instructions on How to Run your app locally
+- Open any code editor (preferably VS Code).
+- In the terminal run this command "git clone https://github.com/khushijohri2001/booket.git"
+- Go inside the application folder, run this command "cd booklet"
+- Install npm or yarn, run this command "npm install" or "yarn install"
+- To start the application, run this command "npm start" or "yarn start"
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demonstration
 
-### `npm run build`
+### Home
+<img width="1440" alt="Screenshot 2024-03-02 at 4 17 35 PM" src="https://github.com/khushijohri2001/booket/assets/65448358/2de500bc-5e6e-4064-8fa7-a0d41f34f389">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Product Listing
+<img width="1440" alt="Screenshot 2024-03-02 at 4 18 25 PM" src="https://github.com/khushijohri2001/booket/assets/65448358/f76abc1e-b3c1-431a-b4ea-95d4a1f4b49e">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
