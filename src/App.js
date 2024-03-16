@@ -47,7 +47,7 @@ const App = () => {
 
   useEffect(() => {
     try{
-      if(width <= 480){
+      if(width <= 520){
       dispatch(MEDIA_MATCH_HANDLER(true));
      } else{
       dispatch(MEDIA_MATCH_HANDLER(false));

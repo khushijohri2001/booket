@@ -11,15 +11,15 @@ const Footer = () => {
 
   return (
     <footer className="flex flex-col">
-      <div className="flex justify-around py-16 px-56 bg-[#fae9e6] max-sm:flex-col max-sm:px-8 max-sm:gap-16">
+      <div className="flex justify-around py-16 px-56 bg-[#fae9e6] max-sm:flex-col max-sm:px-8 max-sm:gap-16 max-lg:px-16  max-lg:gap-12">
         <div className="w-full max-sm:flex max-sm:justify-center">
           <Link to="/">
-            <img src={logo} alt="Logo" className="w-80 hover:scale-105 max-sm:w-48 " />
+            <img src={logo} alt="Logo" className="w-80 hover:scale-105 max-sm:w-48 max-lg:w-56" />
           </Link>
         </div>
-        <div className="flex justify-evenly w-full max-sm:gap-8 max-sm:justify-between">
+        <div className="flex justify-evenly w-full max-sm:gap-8 max-sm:justify-between  max-lg:gap-12">
           <div className="flex flex-col font-serif text-lg gap-1">
-            <h2 className="font-julius text-4xl mb-4 font-bold max-sm:text-3xl max-sm:mb-2">Links</h2>
+            <h2 className="font-julius text-4xl mb-4 font-bold max-sm:text-3xl max-sm:mb-2 max-lg:text-3xl">Links</h2>
             <Link to="products" className="hover:text-rose-900" onClick={() => dispatch(ACTIVE_LINK_HANDLER("products"))}>
               Products
             </Link>
@@ -34,7 +34,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col font-serif text-lg gap-1">
-            <h2 className="font-julius text-4xl mb-4 font-bold max-sm:text-3xl max-sm:mb-2">Connect</h2>
+            <h2 className="font-julius text-4xl mb-4 font-bold max-sm:text-3xl max-sm:mb-2 max-lg:text-3xl">Connect</h2>
             <a
               href="mailto: khushi.johri01@gmail.com"
               className="hover:text-rose-900"

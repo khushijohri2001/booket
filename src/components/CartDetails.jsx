@@ -70,7 +70,7 @@ const CartDetails = () => {
             showMessage ? "opacity-100" : "opacity-0"
           }`}
         >
-          <i class="fa-solid fa-sort-up text-[#ffe7e7] rounded absolute -top-2 left-4 text-3xl"></i>
+          <i className="fa-solid fa-sort-up text-[#ffe7e7] rounded absolute -top-2 left-4 text-3xl"></i>
           <p className="font-bold">Feature Coming Soon</p>
         </div>
       </div>

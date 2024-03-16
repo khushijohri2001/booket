@@ -26,7 +26,7 @@ const Filter = () => {
   }, [isMobileView])
 
   return (
-    <div className={`ml-2 my-5 p-2 border-none max-h-auto w-56 sticky top-44 z-50 bg-[#eec6c6] font-sans max-sm:top-32 max-sm:mx-0 max-sm:my-0 max-sm:fixed max-sm:w-screen`}>
+    <div className={`ml-2 my-5 p-2 border-none max-h-auto w-56 sticky top-44 z-50 bg-[#eec6c6] font-sans max-sm:top-32 max-sm:mx-0 max-sm:my-0 max-sm:fixed max-sm:w-screen max-lg:top-40 max-lg:my-1 max-lg:ml-1`}>
       <div className="flex justify-between items-center">
         <p className="p-2 text-xl font-bold text-rose-900 max-sm:text-lg">Filters</p>
         <button
@@ -58,6 +58,7 @@ const Filter = () => {
                   type="checkbox"
                   value="Notebook"
                   checked={byNotebook}
+                  readOnly
                   onClick={() => {
                     dispatch(FILTER_BY_NOTEBOOK());
                   }}
@@ -73,6 +74,7 @@ const Filter = () => {
                   type="checkbox"
                   value="Bookmark"
                   checked={byBookmark}
+                  readOnly
                   onClick={() => {
                     dispatch(FILTER_BY_BOOKMARK());
                   }}
@@ -88,6 +90,7 @@ const Filter = () => {
                   type="checkbox"
                   value="In Stock"
                   checked={byStock}
+                  readOnly
                   onClick={() => {
                     dispatch(FILTER_BY_STOCK());
                   }}
@@ -134,16 +137,18 @@ const Filter = () => {
                   value=""
                   name="radio"
                   checked={sort === "lowToHigh"}
+                  readOnly
                   className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
                   onChange={() => dispatch(SORT_BY_PRICE("lowToHigh"))}
                 />
-                <label for="radio-1" className="ms-2 text-sm font-medium">
+                <label htmlFor="radio-1" className="ms-2 text-sm font-medium">
                   Low To High
                 </label>
               </div>
               <div className="flex items-center">
                 <input
                   checked={sort === "highToLow"}
+                  readOnly
                   id="radio-2"
                   type="radio"
                   value=""
@@ -152,7 +157,7 @@ const Filter = () => {
                   onChange={() => dispatch(SORT_BY_PRICE("highToLow"))}
                 />
                 <label
-                  for="radio-2"
+                  htmlFor="radio-2"
                   className="ms-2 text-sm font-medium text-gray-900"
                 >
                   High To Low

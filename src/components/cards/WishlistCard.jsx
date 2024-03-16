@@ -19,7 +19,7 @@ const WishlistCard = ({ wishlistItem }) => {
               />
             </div>
     
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 max-lg:w-1/2">
               <p className="text-lg max-sm:text-base">{name}</p>
               <div className="text-md flex gap-2">
                 <p>₹{price}</p>
@@ -28,9 +28,9 @@ const WishlistCard = ({ wishlistItem }) => {
             </div>
           </div>
     
-          <div className="flex justify-between w-[18%] items-center max-sm:justify-normal max-sm:w-full max-sm:items-start max-sm:gap-4">
-    
-            <SecondaryButton
+          <div className="flex justify-between w-[18%] items-center max-sm:justify-normal max-sm:w-full max-sm:items-start max-sm:gap-4 max-lg:gap-10 max-lg:w-56">
+  
+              <SecondaryButton
               label="Move To Cart"
               onClick={() => {
                 dispatch(ADD_TO_CART(wishlistItem));

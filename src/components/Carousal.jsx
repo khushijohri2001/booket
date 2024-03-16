@@ -25,8 +25,8 @@ const Carousal = () => {
     }, [index]);
   
     return (
-      <section className="bg-white py-28 mx-auto z-10 max-sm:py-40">
-        <div className=" mt-12 mx-auto mb-0 h-[90vh] max-w-[90vw] text-center relative flex overflow-hidden max-md:h-[450px] max-sm:h-[250px]">
+      <section className="bg-white py-28 mx-auto z-10 max-sm:py-40 max-lg:py-20">
+        <div className="mx-auto h-[90vh] max-w-[90vw] text-center relative flex overflow-hidden  max-lg:h-[560px] max-sm:h-[250px]">
 
           {sliderProductDetail.map((item, indexProduct) => {
             
@@ -49,7 +49,7 @@ const Carousal = () => {
 
             return (
               <article className={`${position} absolute top-0 left-0 w-full h-full transition ease-linear delay-300 opacity-1 `} key={id}>
-                <img src={image} alt={name} className="mb-4 mx-auto w-3/4 h-4/5 object-cover border-4 border-rose-300 shadow-md z-10" />
+                <img src={image} alt={name} className="mb-4 mx-auto w-3/4 h-4/5 object-cover border-4 border-rose-300 shadow-md z-10 " />
               </article>
             );
           })}

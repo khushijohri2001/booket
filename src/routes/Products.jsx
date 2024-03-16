@@ -59,7 +59,7 @@ const Products = () => {
      <>
      {
       isLoading || filteredProductList.length === 0 ? <h1 className="mx-8">No Products Found</h1> : (
-        <div className="my-4 flex flex-wrap mx-8 gap-8 max-sm:justify-center max-sm:mt-24">
+        <div className="my-4 flex flex-wrap mx-8 gap-8 max-sm:justify-center max-sm:mt-24 max-lg:justify-center ">
         {filteredProductList.map((product) => {
           const {id, availablity } = product;
 

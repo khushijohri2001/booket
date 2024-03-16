@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux';
 import ProductCard from './cards/ProductCard';
 import { useNavigate } from 'react-router';
@@ -7,7 +7,9 @@ const YouMayAlsoLike = ({currentCategory, id}) => {
     const allProductList = useSelector((store) => store.product.allProductList);
     const navigate = useNavigate();
 
-
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    })
 
   return (
     <div className='flex flex-col gap-4'>

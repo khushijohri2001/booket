@@ -42,13 +42,13 @@ const SingleProducts = () => {
   const wishList = useSelector((store) => store.wishlist.wishList);
 
   return (
-    <div className="py-16 px-36 bg-[#eec6c6] w-full max-sm:px-4 ">
-      <div className="flex justify-evenly gap-1 max-sm:flex-col max-sm:items-center max-sm:gap-8">
+    <div className="py-16 px-36 bg-[#eec6c6] w-full max-sm:px-4 max-lg:px-16 max-lg:py-8">
+      <div className="flex justify-evenly gap-1 max-sm:flex-col max-sm:items-center max-sm:gap-8 max-lg:gap-10">
         <div className="w-full max-sm:w-auto">
           <img
             src={image}
             alt={name}
-            className="border-2 border-white h-[34rem] w-[34rem] object-cover max-sm:w-64 max-sm:h-64"
+            className="border-2 border-white h-[34rem] w-[34rem] object-cover max-sm:w-64 max-sm:h-64 max-lg:h-[28rem] max-lg:w-[28rem]"
           />
         </div>
 
@@ -110,7 +110,7 @@ const SingleProducts = () => {
                       showMessage ? "opacity-100" : "opacity-0"
                     }`}
                   >
-                    <i class="fa-solid fa-sort-up text-[#ffe7e7] rounded absolute -top-2 left-4 text-3xl"></i>
+                    <i className="fa-solid fa-sort-up text-[#ffe7e7] rounded absolute -top-2 left-4 text-3xl"></i>
                     <p className="font-bold">Feature Coming Soon</p>
                   </div>
                 </div>
